@@ -1,7 +1,5 @@
-# livability
-# Climate-Induced Migration and Livability Concerns
-
-## Challenge
+# livability 
+<h3>Climate-Induced Migration and Livability Concerns</h3>
 
 Climate change is causing shifts in weather patterns, leading to extreme heat, rising sea levels, and an increased frequency of natural disasters. People face challenges in assessing the livability of a location due to uncertainties related to climate conditions.
 
