@@ -38,17 +38,30 @@ try:
 except requests.exceptions.RequestException as e:
     print(f"Failed to get available zones: {e}")
 
+# filter the data to keep only the required
+cleaned_ci_results = {}
+for zone, data in ci_results.items():
+    if 'error' in data:
+        cleaned_ci_results[zone] = data
+    else:
+        cleaned_ci_results[zone] = {
+            'carbonIntensity': data.get('carbonIntensity'),
+            'datetime': data.get('datetime'),
+            'updatedAt': data.get('updatedAt'),
+            'createdAt': data.get('createdAt')
+        }
+
 # pretty print 🎀
-pprint(ci_results)
+pprint(cleaned_ci_results)
 
 os.makedirs('data', exist_ok=True)
 
 # write to file
 with open('data/carbonIntensityData.json', 'w') as json_file:
-    json.dump(ci_results, json_file, indent=4)
+    json.dump(cleaned_ci_results, json_file, indent=4)
 
-issues_count = len([zone for zone in ci_results if 'error' in ci_results[zone]])
-no_issues_count = len(ci_results) - issues_count
+issues_count = len([zone for zone in cleaned_ci_results if 'error' in cleaned_ci_results[zone]])
+no_issues_count = len(cleaned_ci_results) - issues_count
 
 print(f"zones with issues: {issues_count}")
 print(f"zones without issues: {no_issues_count}")
