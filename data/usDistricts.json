@@ -1,0 +1,4986 @@
+{
+  "New York": [
+    {
+      "city": "New York",
+      "districts": [
+        "NY-10",
+        "NY-12",
+        "NY-13"
+      ]
+    },
+    {
+      "city": "Buffalo",
+      "districts": [
+        "NY-26"
+      ]
+    },
+    {
+      "city": "Rochester",
+      "districts": [
+        "NY-25"
+      ]
+    },
+    {
+      "city": "Yonkers",
+      "districts": [
+        "NY-16"
+      ]
+    },
+    {
+      "city": "Syracuse",
+      "districts": [
+        "NY-24"
+      ]
+    },
+    {
+      "city": "Albany",
+      "districts": [
+        "NY-20"
+      ]
+    },
+    {
+      "city": "New Rochelle",
+      "districts": [
+        "NY-16"
+      ]
+    },
+    {
+      "city": "Mount Vernon",
+      "districts": [
+        "NY-16"
+      ]
+    },
+    {
+      "city": "Schenectady",
+      "districts": [
+        "NY-20"
+      ]
+    },
+    {
+      "city": "Utica",
+      "districts": [
+        "NY-22"
+      ]
+    },
+    {
+      "city": "White Plains",
+      "districts": [
+        "NY-17"
+      ]
+    },
+    {
+      "city": "Hempstead",
+      "districts": [
+        "NY-4"
+      ]
+    },
+    {
+      "city": "Troy",
+      "districts": [
+        "NY-20"
+      ]
+    },
+    {
+      "city": "Niagara Falls",
+      "districts": [
+        "NY-26"
+      ]
+    },
+    {
+      "city": "Binghamton",
+      "districts": [
+        "NY-22"
+      ]
+    },
+    {
+      "city": "Freeport",
+      "districts": [
+        "NY-4"
+      ]
+    },
+    {
+      "city": "Valley Stream",
+      "districts": [
+        "NY-4"
+      ]
+    }
+  ],
+  "California": [
+    {
+      "city": "Los Angeles",
+      "districts": [
+        "CA-34",
+        "CA-37",
+        "CA-40"
+      ]
+    },
+    {
+      "city": "San Diego",
+      "districts": [
+        "CA-52",
+        "CA-53"
+      ]
+    },
+    {
+      "city": "San Jose",
+      "districts": [
+        "CA-19"
+      ]
+    },
+    {
+      "city": "San Francisco",
+      "districts": [
+        "CA-12"
+      ]
+    },
+    {
+      "city": "Fresno",
+      "districts": [
+        "CA-22"
+      ]
+    },
+    {
+      "city": "Sacramento",
+      "districts": [
+        "CA-6",
+        "CA-7"
+      ]
+    },
+    {
+      "city": "Long Beach",
+      "districts": [
+        "CA-47"
+      ]
+    },
+    {
+      "city": "Oakland",
+      "districts": [
+        "CA-13"
+      ]
+    },
+    {
+      "city": "Bakersfield",
+      "districts": [
+        "CA-23"
+      ]
+    },
+    {
+      "city": "Anaheim",
+      "districts": [
+        "CA-46"
+      ]
+    },
+    {
+      "city": "Santa Ana",
+      "districts": [
+        "CA-46"
+      ]
+    },
+    {
+      "city": "Riverside",
+      "districts": [
+        "CA-41"
+      ]
+    },
+    {
+      "city": "Stockton",
+      "districts": [
+        "CA-9"
+      ]
+    },
+    {
+      "city": "Chula Vista",
+      "districts": [
+        "CA-51"
+      ]
+    },
+    {
+      "city": "Irvine",
+      "districts": [
+        "CA-45"
+      ]
+    },
+    {
+      "city": "Fremont",
+      "districts": [
+        "CA-17"
+      ]
+    },
+    {
+      "city": "San Bernardino",
+      "districts": [
+        "CA-31"
+      ]
+    },
+    {
+      "city": "Modesto",
+      "districts": [
+        "CA-10"
+      ]
+    },
+    {
+      "city": "Fontana",
+      "districts": [
+        "CA-31"
+      ]
+    },
+    {
+      "city": "Oxnard",
+      "districts": [
+        "CA-26"
+      ]
+    }
+  ],
+  "Illinois": [
+    {
+      "city": "Chicago",
+      "districts": [
+        "IL-1",
+        "IL-2",
+        "IL-3",
+        "IL-4",
+        "IL-5",
+        "IL-7",
+        "IL-9"
+      ]
+    },
+    {
+      "city": "Aurora",
+      "districts": [
+        "IL-11"
+      ]
+    },
+    {
+      "city": "Rockford",
+      "districts": [
+        "IL-16"
+      ]
+    },
+    {
+      "city": "Joliet",
+      "districts": [
+        "IL-11"
+      ]
+    },
+    {
+      "city": "Naperville",
+      "districts": [
+        "IL-11",
+        "IL-6"
+      ]
+    },
+    {
+      "city": "Springfield",
+      "districts": [
+        "IL-18"
+      ]
+    },
+    {
+      "city": "Peoria",
+      "districts": [
+        "IL-18"
+      ]
+    },
+    {
+      "city": "Elgin",
+      "districts": [
+        "IL-6"
+      ]
+    },
+    {
+      "city": "Waukegan",
+      "districts": [
+        "IL-10"
+      ]
+    },
+    {
+      "city": "Cicero",
+      "districts": [
+        "IL-4"
+      ]
+    },
+    {
+      "city": "Champaign",
+      "districts": [
+        "IL-13"
+      ]
+    },
+    {
+      "city": "Bloomington",
+      "districts": [
+        "IL-13"
+      ]
+    },
+    {
+      "city": "Arlington Heights",
+      "districts": [
+        "IL-9"
+      ]
+    },
+    {
+      "city": "Evanston",
+      "districts": [
+        "IL-9"
+      ]
+    },
+    {
+      "city": "Decatur",
+      "districts": [
+        "IL-13"
+      ]
+    },
+    {
+      "city": "Schaumburg",
+      "districts": [
+        "IL-8"
+      ]
+    },
+    {
+      "city": "Bolingbrook",
+      "districts": [
+        "IL-11"
+      ]
+    },
+    {
+      "city": "Palatine",
+      "districts": [
+        "IL-6"
+      ]
+    },
+    {
+      "city": "Skokie",
+      "districts": [
+        "IL-9"
+      ]
+    },
+    {
+      "city": "Des Plaines",
+      "districts": [
+        "IL-9"
+      ]
+    },
+    {
+      "city": "Orland Park",
+      "districts": [
+        "IL-3"
+      ]
+    },
+    {
+      "city": "Tinley Park",
+      "districts": [
+        "IL-3"
+      ]
+    },
+    {
+      "city": "Oak Lawn",
+      "districts": [
+        "IL-3"
+      ]
+    },
+    {
+      "city": "Berwyn",
+      "districts": [
+        "IL-4"
+      ]
+    },
+    {
+      "city": "Mount Prospect",
+      "districts": [
+        "IL-9"
+      ]
+    },
+    {
+      "city": "Normal",
+      "districts": [
+        "IL-13"
+      ]
+    },
+    {
+      "city": "Wheaton",
+      "districts": [
+        "IL-6"
+      ]
+    },
+    {
+      "city": "Hoffman Estates",
+      "districts": [
+        "IL-8"
+      ]
+    },
+    {
+      "city": "Oak Park",
+      "districts": [
+        "IL-7"
+      ]
+    },
+    {
+      "city": "Downers Grove",
+      "districts": [
+        "IL-6"
+      ]
+    },
+    {
+      "city": "Elmhurst",
+      "districts": [
+        "IL-6"
+      ]
+    },
+    {
+      "city": "Glenview",
+      "districts": [
+        "IL-9"
+      ]
+    },
+    {
+      "city": "DeKalb",
+      "districts": [
+        "IL-16"
+      ]
+    },
+    {
+      "city": "Lombard",
+      "districts": [
+        "IL-6"
+      ]
+    },
+    {
+      "city": "Belleville",
+      "districts": [
+        "IL-12"
+      ]
+    },
+    {
+      "city": "Moline",
+      "districts": [
+        "IL-17"
+      ]
+    },
+    {
+      "city": "Buffalo Grove",
+      "districts": [
+        "IL-10"
+      ]
+    },
+    {
+      "city": "Bartlett",
+      "districts": [
+        "IL-8"
+      ]
+    },
+    {
+      "city": "Urbana",
+      "districts": [
+        "IL-13"
+      ]
+    },
+    {
+      "city": "Quincy",
+      "districts": [
+        "IL-18"
+      ]
+    },
+    {
+      "city": "Crystal Lake",
+      "districts": [
+        "IL-14"
+      ]
+    },
+    {
+      "city": "Plainfield",
+      "districts": [
+        "IL-11"
+      ]
+    },
+    {
+      "city": "Streamwood",
+      "districts": [
+        "IL-8"
+      ]
+    },
+    {
+      "city": "Carol Stream",
+      "districts": [
+        "IL-6"
+      ]
+    },
+    {
+      "city": "Romeoville",
+      "districts": [
+        "IL-11"
+      ]
+    },
+    {
+      "city": "Rock Island",
+      "districts": [
+        "IL-17"
+      ]
+    },
+    {
+      "city": "Hanover Park",
+      "districts": [
+        "IL-8"
+      ]
+    },
+    {
+      "city": "Carpentersville",
+      "districts": [
+        "IL-8"
+      ]
+    },
+    {
+      "city": "Wheeling",
+      "districts": [
+        "IL-10"
+      ]
+    },
+    {
+      "city": "Park Ridge",
+      "districts": [
+        "IL-9"
+      ]
+    },
+    {
+      "city": "Addison",
+      "districts": [
+        "IL-8"
+      ]
+    },
+    {
+      "city": "Calumet City",
+      "districts": [
+        "IL-2"
+      ]
+    }
+  ],
+  "Texas": [
+    {
+      "city": "Houston",
+      "districts": [
+        "TX-2",
+        "TX-7",
+        "TX-9",
+        "TX-18",
+        "TX-29"
+      ]
+    },
+    {
+      "city": "San Antonio",
+      "districts": [
+        "TX-20",
+        "TX-21",
+        "TX-23",
+        "TX-28",
+        "TX-35"
+      ]
+    },
+    {
+      "city": "Dallas",
+      "districts": [
+        "TX-5",
+        "TX-30",
+        "TX-32"
+      ]
+    },
+    {
+      "city": "Austin",
+      "districts": [
+        "TX-10",
+        "TX-17",
+        "TX-21",
+        "TX-25",
+        "TX-35"
+      ]
+    },
+    {
+      "city": "Fort Worth",
+      "districts": [
+        "TX-6",
+        "TX-12",
+        "TX-24",
+        "TX-26"
+      ]
+    },
+    {
+      "city": "El Paso",
+      "districts": [
+        "TX-16"
+      ]
+    },
+    {
+      "city": "Arlington",
+      "districts": [
+        "TX-6"
+      ]
+    },
+    {
+      "city": "Corpus Christi",
+      "districts": [
+        "TX-27"
+      ]
+    },
+    {
+      "city": "Plano",
+      "districts": [
+        "TX-3"
+      ]
+    },
+    {
+      "city": "Laredo",
+      "districts": [
+        "TX-28"
+      ]
+    },
+    {
+      "city": "Lubbock",
+      "districts": [
+        "TX-19"
+      ]
+    },
+    {
+      "city": "Garland",
+      "districts": [
+        "TX-32"
+      ]
+    },
+    {
+      "city": "Irving",
+      "districts": [
+        "TX-24"
+      ]
+    },
+    {
+      "city": "Amarillo",
+      "districts": [
+        "TX-13"
+      ]
+    },
+    {
+      "city": "Grand Prairie",
+      "districts": [
+        "TX-30",
+        "TX-33"
+      ]
+    },
+    {
+      "city": "Brownsville",
+      "districts": [
+        "TX-34"
+      ]
+    },
+    {
+      "city": "Pasadena",
+      "districts": [
+        "TX-36"
+      ]
+    },
+    {
+      "city": "McKinney",
+      "districts": [
+        "TX-3"
+      ]
+    },
+    {
+      "city": "Mesquite",
+      "districts": [
+        "TX-5"
+      ]
+    },
+    {
+      "city": "McAllen",
+      "districts": [
+        "TX-15"
+      ]
+    },
+    {
+      "city": "Killeen",
+      "districts": [
+        "TX-31"
+      ]
+    },
+    {
+      "city": "Frisco",
+      "districts": [
+        "TX-3"
+      ]
+    },
+    {
+      "city": "Waco",
+      "districts": [
+        "TX-17"
+      ]
+    },
+    {
+      "city": "Carrollton",
+      "districts": [
+        "TX-24"
+      ]
+    },
+    {
+      "city": "Denton",
+      "districts": [
+        "TX-26"
+      ]
+    },
+    {
+      "city": "Midland",
+      "districts": [
+        "TX-11"
+      ]
+    },
+    {
+      "city": "Abilene",
+      "districts": [
+        "TX-19"
+      ]
+    },
+    {
+      "city": "Beaumont",
+      "districts": [
+        "TX-14"
+      ]
+    },
+    {
+      "city": "Round Rock",
+      "districts": [
+        "TX-31"
+      ]
+    },
+    {
+      "city": "Odessa",
+      "districts": [
+        "TX-11"
+      ]
+    },
+    {
+      "city": "Wichita Falls",
+      "districts": [
+        "TX-13"
+      ]
+    },
+    {
+      "city": "Richardson",
+      "districts": [
+        "TX-32"
+      ]
+    },
+    {
+      "city": "Lewisville",
+      "districts": [
+        "TX-26"
+      ]
+    },
+    {
+      "city": "Tyler",
+      "districts": [
+        "TX-1"
+      ]
+    },
+    {
+      "city": "College Station",
+      "districts": [
+        "TX-17"
+      ]
+    },
+    {
+      "city": "Pearland",
+      "districts": [
+        "TX-22"
+      ]
+    },
+    {
+      "city": "San Angelo",
+      "districts": [
+        "TX-11"
+      ]
+    },
+    {
+      "city": "Allen",
+      "districts": [
+        "TX-3"
+      ]
+    },
+    {
+      "city": "League City",
+      "districts": [
+        "TX-14"
+      ]
+    },
+    {
+      "city": "Sugar Land",
+      "districts": [
+        "TX-22"
+      ]
+    },
+    {
+      "city": "Longview",
+      "districts": [
+        "TX-1"
+      ]
+    },
+    {
+      "city": "Edinburg",
+      "districts": [
+        "TX-15"
+      ]
+    },
+    {
+      "city": "Mission",
+      "districts": [
+        "TX-15"
+      ]
+    },
+    {
+      "city": "Bryan",
+      "districts": [
+        "TX-17"
+      ]
+    },
+    {
+      "city": "Baytown",
+      "districts": [
+        "TX-36"
+      ]
+    },
+    {
+      "city": "Pharr",
+      "districts": [
+        "TX-15"
+      ]
+    },
+    {
+      "city": "Temple",
+      "districts": [
+        "TX-31"
+      ]
+    },
+    {
+      "city": "Missouri City",
+      "districts": [
+        "TX-22"
+      ]
+    },
+    {
+      "city": "Flower Mound",
+      "districts": [
+        "TX-26"
+      ]
+    },
+    {
+      "city": "Harlingen",
+      "districts": [
+        "TX-34"
+      ]
+    },
+    {
+      "city": "North Richland Hills",
+      "districts": [
+        "TX-24"
+      ]
+    },
+    {
+      "city": "Victoria",
+      "districts": [
+        "TX-27"
+      ]
+    },
+    {
+      "city": "Conroe",
+      "districts": [
+        "TX-8"
+      ]
+    },
+    {
+      "city": "New Braunfels",
+      "districts": [
+        "TX-21"
+      ]
+    },
+    {
+      "city": "Mansfield",
+      "districts": [
+        "TX-6"
+      ]
+    },
+    {
+      "city": "Cedar Park",
+      "districts": [
+        "TX-31"
+      ]
+    },
+    {
+      "city": "Rowlett",
+      "districts": [
+        "TX-32"
+      ]
+    },
+    {
+      "city": "Port Arthur",
+      "districts": [
+        "TX-14"
+      ]
+    },
+    {
+      "city": "Euless",
+      "districts": [
+        "TX-24"
+      ]
+    },
+    {
+      "city": "Georgetown",
+      "districts": [
+        "TX-31"
+      ]
+    },
+    {
+      "city": "Pflugerville",
+      "districts": [
+        "TX-17"
+      ]
+    },
+    {
+      "city": "DeSoto",
+      "districts": [
+        "TX-30"
+      ]
+    },
+    {
+      "city": "San Marcos",
+      "districts": [
+        "TX-35"
+      ]
+    },
+    {
+      "city": "Grapevine",
+      "districts": [
+        "TX-24"
+      ]
+    },
+    {
+      "city": "Bedford",
+      "districts": [
+        "TX-24"
+      ]
+    },
+    {
+      "city": "Galveston",
+      "districts": [
+        "TX-14"
+      ]
+    },
+    {
+      "city": "Cedar Hill",
+      "districts": [
+        "TX-30"
+      ]
+    },
+    {
+      "city": "Texas City",
+      "districts": [
+        "TX-14"
+      ]
+    },
+    {
+      "city": "Wylie",
+      "districts": [
+        "TX-3"
+      ]
+    },
+    {
+      "city": "Haltom City",
+      "districts": [
+        "TX-12"
+      ]
+    },
+    {
+      "city": "Keller",
+      "districts": [
+        "TX-26"
+      ]
+    },
+    {
+      "city": "Coppell",
+      "districts": [
+        "TX-24"
+      ]
+    },
+    {
+      "city": "Rockwall",
+      "districts": [
+        "TX-4"
+      ]
+    },
+    {
+      "city": "Huntsville",
+      "districts": [
+        "TX-8"
+      ]
+    },
+    {
+      "city": "Duncanville",
+      "districts": [
+        "TX-30"
+      ]
+    },
+    {
+      "city": "Sherman",
+      "districts": [
+        "TX-4"
+      ]
+    },
+    {
+      "city": "The Colony",
+      "districts": [
+        "TX-26"
+      ]
+    },
+    {
+      "city": "Burleson",
+      "districts": [
+        "TX-6"
+      ]
+    },
+    {
+      "city": "Hurst",
+      "districts": [
+        "TX-24"
+      ]
+    },
+    {
+      "city": "Lancaster",
+      "districts": [
+        "TX-30"
+      ]
+    },
+    {
+      "city": "Texarkana",
+      "districts": [
+        "TX-4"
+      ]
+    },
+    {
+      "city": "Friendswood",
+      "districts": [
+        "TX-14"
+      ]
+    },
+    {
+      "city": "Weslaco",
+      "districts": [
+        "TX-15"
+      ]
+    }
+  ],
+  "Pennsylvania": [
+    {
+      "city": "Philadelphia",
+      "districts": [
+        "PA-2",
+        "PA-3",
+        "PA-5"
+      ]
+    },
+    {
+      "city": "Pittsburgh",
+      "districts": [
+        "PA-18"
+      ]
+    },
+    {
+      "city": "Allentown",
+      "districts": [
+        "PA-7"
+      ]
+    },
+    {
+      "city": "Erie",
+      "districts": [
+        "PA-16"
+      ]
+    },
+    {
+      "city": "Reading",
+      "districts": [
+        "PA-6"
+      ]
+    },
+    {
+      "city": "Scranton",
+      "districts": [
+        "PA-8"
+      ]
+    },
+    {
+      "city": "Bethlehem",
+      "districts": [
+        "PA-7"
+      ]
+    },
+    {
+      "city": "Lancaster",
+      "districts": [
+        "PA-11"
+      ]
+    },
+    {
+      "city": "Harrisburg",
+      "districts": [
+        "PA-10"
+      ]
+    },
+    {
+      "city": "Altoona",
+      "districts": [
+        "PA-13"
+      ]
+    },
+    {
+      "city": "York",
+      "districts": [
+        "PA-10"
+      ]
+    },
+    {
+      "city": "State College",
+      "districts": [
+        "PA-12"
+      ]
+    },
+    {
+      "city": "Wilkes-Barre",
+      "districts": [
+        "PA-8"
+      ]
+    }
+  ],
+  "Arizona": [
+    {
+      "city": "Phoenix",
+      "districts": [
+        "AZ-1",
+        "AZ-3",
+        "AZ-4",
+        "AZ-5",
+        "AZ-7",
+        "AZ-9"
+      ]
+    },
+    {
+      "city": "Tucson",
+      "districts": [
+        "AZ-2",
+        "AZ-3"
+      ]
+    },
+    {
+      "city": "Mesa",
+      "districts": [
+        "AZ-5"
+      ]
+    },
+    {
+      "city": "Chandler",
+      "districts": [
+        "AZ-5"
+      ]
+    },
+    {
+      "city": "Glendale",
+      "districts": [
+        "AZ-8"
+      ]
+    },
+    {
+      "city": "Scottsdale",
+      "districts": [
+        "AZ-6"
+      ]
+    },
+    {
+      "city": "Gilbert",
+      "districts": [
+        "AZ-5"
+      ]
+    },
+    {
+      "city": "Tempe",
+      "districts": [
+        "AZ-9"
+      ]
+    },
+    {
+      "city": "Peoria",
+      "districts": [
+        "AZ-8"
+      ]
+    },
+    {
+      "city": "Surprise",
+      "districts": [
+        "AZ-8"
+      ]
+    },
+    {
+      "city": "Yuma",
+      "districts": [
+        "AZ-3"
+      ]
+    },
+    {
+      "city": "Avondale",
+      "districts": [
+        "AZ-3"
+      ]
+    },
+    {
+      "city": "Goodyear",
+      "districts": [
+        "AZ-3"
+      ]
+    },
+    {
+      "city": "Flagstaff",
+      "districts": [
+        "AZ-1"
+      ]
+    },
+    {
+      "city": "Buckeye",
+      "districts": [
+        "AZ-3"
+      ]
+    },
+    {
+      "city": "Lake Havasu City",
+      "districts": [
+        "AZ-4"
+      ]
+    },
+    {
+      "city": "Casa Grande",
+      "districts": [
+        "AZ-1"
+      ]
+    },
+    {
+      "city": "Sierra Vista",
+      "districts": [
+        "AZ-2"
+      ]
+    },
+    {
+      "city": "Maricopa",
+      "districts": [
+        "AZ-1"
+      ]
+    },
+    {
+      "city": "Oro Valley",
+      "districts": [
+        "AZ-2"
+      ]
+    },
+    {
+      "city": "Prescott",
+      "districts": [
+        "AZ-4"
+      ]
+    },
+    {
+      "city": "Bullhead City",
+      "districts": [
+        "AZ-4"
+      ]
+    },
+    {
+      "city": "Prescott Valley",
+      "districts": [
+        "AZ-4"
+      ]
+    },
+    {
+      "city": "Marana",
+      "districts": [
+        "AZ-1"
+      ]
+    },
+    {
+      "city": "Apache Junction",
+      "districts": [
+        "AZ-4"
+      ]
+    }
+  ],
+  "Florida": [
+    {
+      "city": "Jacksonville",
+      "districts": [
+        "FL-4",
+        "FL-5"
+      ]
+    },
+    {
+      "city": "Miami",
+      "districts": [
+        "FL-24",
+        "FL-25",
+        "FL-27"
+      ]
+    },
+    {
+      "city": "Tampa",
+      "districts": [
+        "FL-14"
+      ]
+    },
+    {
+      "city": "Orlando",
+      "districts": [
+        "FL-7",
+        "FL-9",
+        "FL-10"
+      ]
+    },
+    {
+      "city": "St. Petersburg",
+      "districts": [
+        "FL-13"
+      ]
+    },
+    {
+      "city": "Hialeah",
+      "districts": [
+        "FL-25"
+      ]
+    },
+    {
+      "city": "Tallahassee",
+      "districts": [
+        "FL-5"
+      ]
+    },
+    {
+      "city": "Fort Lauderdale",
+      "districts": [
+        "FL-20"
+      ]
+    },
+    {
+      "city": "Port St. Lucie",
+      "districts": [
+        "FL-18"
+      ]
+    },
+    {
+      "city": "Cape Coral",
+      "districts": [
+        "FL-19"
+      ]
+    },
+    {
+      "city": "Pembroke Pines",
+      "districts": [
+        "FL-23"
+      ]
+    },
+    {
+      "city": "Hollywood",
+      "districts": [
+        "FL-23"
+      ]
+    },
+    {
+      "city": "Miramar",
+      "districts": [
+        "FL-24"
+      ]
+    },
+    {
+      "city": "Gainesville",
+      "districts": [
+        "FL-3"
+      ]
+    },
+    {
+      "city": "Coral Springs",
+      "districts": [
+        "FL-22"
+      ]
+    },
+    {
+      "city": "Miami Gardens",
+      "districts": [
+        "FL-24"
+      ]
+    },
+    {
+      "city": "Clearwater",
+      "districts": [
+        "FL-13"
+      ]
+    },
+    {
+      "city": "Palm Bay",
+      "districts": [
+        "FL-8"
+      ]
+    },
+    {
+      "city": "Pompano Beach",
+      "districts": [
+        "FL-22"
+      ]
+    },
+    {
+      "city": "West Palm Beach",
+      "districts": [
+        "FL-21"
+      ]
+    },
+    {
+      "city": "Lakeland",
+      "districts": [
+        "FL-15"
+      ]
+    },
+    {
+      "city": "Davie",
+      "districts": [
+        "FL-23"
+      ]
+    },
+    {
+      "city": "Miami Beach",
+      "districts": [
+        "FL-27"
+      ]
+    },
+    {
+      "city": "Sunrise",
+      "districts": [
+        "FL-20"
+      ]
+    },
+    {
+      "city": "Plantation",
+      "districts": [
+        "FL-20"
+      ]
+    },
+    {
+      "city": "Boca Raton",
+      "districts": [
+        "FL-22"
+      ]
+    },
+    {
+      "city": "Deltona",
+      "districts": [
+        "FL-6"
+      ]
+    },
+    {
+      "city": "Largo",
+      "districts": [
+        "FL-13"
+      ]
+    },
+    {
+      "city": "Deerfield Beach",
+      "districts": [
+        "FL-22"
+      ]
+    },
+    {
+      "city": "Palm Coast",
+      "districts": [
+        "FL-6"
+      ]
+    },
+    {
+      "city": "Melbourne",
+      "districts": [
+        "FL-8"
+      ]
+    },
+    {
+      "city": "Boynton Beach",
+      "districts": [
+        "FL-18"
+      ]
+    },
+    {
+      "city": "Lauderhill",
+      "districts": [
+        "FL-20"
+      ]
+    },
+    {
+      "city": "Weston",
+      "districts": [
+        "FL-23"
+      ]
+    },
+    {
+      "city": "Fort Myers",
+      "districts": [
+        "FL-19"
+      ]
+    },
+    {
+      "city": "Kissimmee",
+      "districts": [
+        "FL-9"
+      ]
+    },
+    {
+      "city": "Homestead",
+      "districts": [
+        "FL-26"
+      ]
+    },
+    {
+      "city": "Tamarac",
+      "districts": [
+        "FL-20"
+      ]
+    },
+    {
+      "city": "Delray Beach",
+      "districts": [
+        "FL-21"
+      ]
+    },
+    {
+      "city": "Daytona Beach",
+      "districts": [
+        "FL-6"
+      ]
+    },
+    {
+      "city": "North Miami",
+      "districts": [
+        "FL-24"
+      ]
+    },
+    {
+      "city": "Wellington",
+      "districts": [
+        "FL-21"
+      ]
+    },
+    {
+      "city": "North Port",
+      "districts": [
+        "FL-17"
+      ]
+    },
+    {
+      "city": "Jupiter",
+      "districts": [
+        "FL-18"
+      ]
+    },
+    {
+      "city": "Ocala",
+      "districts": [
+        "FL-3"
+      ]
+    },
+    {
+      "city": "Port Orange",
+      "districts": [
+        "FL-6"
+      ]
+    },
+    {
+      "city": "Margate",
+      "districts": [
+        "FL-22"
+      ]
+    },
+    {
+      "city": "Coconut Creek",
+      "districts": [
+        "FL-22"
+      ]
+    },
+    {
+      "city": "Sanford",
+      "districts": [
+        "FL-7"
+      ]
+    },
+    {
+      "city": "Sarasota",
+      "districts": [
+        "FL-16"
+      ]
+    },
+    {
+      "city": "Pensacola",
+      "districts": [
+        "FL-1"
+      ]
+    },
+    {
+      "city": "Bradenton",
+      "districts": [
+        "FL-16"
+      ]
+    },
+    {
+      "city": "Palm Beach Gardens",
+      "districts": [
+        "FL-18"
+      ]
+    },
+    {
+      "city": "Pinellas Park",
+      "districts": [
+        "FL-13"
+      ]
+    },
+    {
+      "city": "Coral Gables",
+      "districts": [
+        "FL-27"
+      ]
+    },
+    {
+      "city": "Doral",
+      "districts": [
+        "FL-25"
+      ]
+    },
+    {
+      "city": "Bonita Springs",
+      "districts": [
+        "FL-19"
+      ]
+    },
+    {
+      "city": "Apopka",
+      "districts": [
+        "FL-10"
+      ]
+    },
+    {
+      "city": "Titusville",
+      "districts": [
+        "FL-8"
+      ]
+    },
+    {
+      "city": "North Miami Beach",
+      "districts": [
+        "FL-22"
+      ]
+    },
+    {
+      "city": "Oakland Park",
+      "districts": [
+        "FL-22"
+      ]
+    },
+    {
+      "city": "Fort Pierce",
+      "districts": [
+        "FL-18"
+      ]
+    },
+    {
+      "city": "North Lauderdale",
+      "districts": [
+        "FL-20"
+      ]
+    },
+    {
+      "city": "Cutler Bay",
+      "districts": [
+        "FL-26"
+      ]
+    },
+    {
+      "city": "Altamonte Springs",
+      "districts": [
+        "FL-7"
+      ]
+    },
+    {
+      "city": "St. Cloud",
+      "districts": [
+        "FL-9"
+      ]
+    },
+    {
+      "city": "Greenacres",
+      "districts": [
+        "FL-21"
+      ]
+    },
+    {
+      "city": "Ormond Beach",
+      "districts": [
+        "FL-6"
+      ]
+    },
+    {
+      "city": "Ocoee",
+      "districts": [
+        "FL-10"
+      ]
+    },
+    {
+      "city": "Hallandale Beach",
+      "districts": [
+        "FL-23"
+      ]
+    },
+    {
+      "city": "Winter Garden",
+      "districts": [
+        "FL-10"
+      ]
+    },
+    {
+      "city": "Aventura",
+      "districts": [
+        "FL-23"
+      ]
+    }
+  ],
+  "Indiana": [
+    {
+      "city": "Indianapolis",
+      "districts": [
+        "IN-5",
+        "IN-7"
+      ]
+    },
+    {
+      "city": "Fort Wayne",
+      "districts": [
+        "IN-3"
+      ]
+    },
+    {
+      "city": "Evansville",
+      "districts": [
+        "IN-8"
+      ]
+    },
+    {
+      "city": "South Bend",
+      "districts": [
+        "IN-2"
+      ]
+    },
+    {
+      "city": "Carmel",
+      "districts": [
+        "IN-5"
+      ]
+    },
+    {
+      "city": "Bloomington",
+      "districts": [
+        "IN-9"
+      ]
+    },
+    {
+      "city": "Fishers",
+      "districts": [
+        "IN-5"
+      ]
+    },
+    {
+      "city": "Hammond",
+      "districts": [
+        "IN-1"
+      ]
+    },
+    {
+      "city": "Gary",
+      "districts": [
+        "IN-1"
+      ]
+    },
+    {
+      "city": "Muncie",
+      "districts": [
+        "IN-6"
+      ]
+    },
+    {
+      "city": "Lafayette",
+      "districts": [
+        "IN-4"
+      ]
+    },
+    {
+      "city": "Terre Haute",
+      "districts": [
+        "IN-8"
+      ]
+    },
+    {
+      "city": "Kokomo",
+      "districts": [
+        "IN-5"
+      ]
+    },
+    {
+      "city": "Anderson",
+      "districts": [
+        "IN-5"
+      ]
+    },
+    {
+      "city": "Noblesville",
+      "districts": [
+        "IN-5"
+      ]
+    },
+    {
+      "city": "Greenwood",
+      "districts": [
+        "IN-9"
+      ]
+    },
+    {
+      "city": "Elkhart",
+      "districts": [
+        "IN-2"
+      ]
+    },
+    {
+      "city": "Mishawaka",
+      "districts": [
+        "IN-2"
+      ]
+    },
+    {
+      "city": "Lawrence",
+      "districts": [
+        "IN-5"
+      ]
+    },
+    {
+      "city": "Jeffersonville",
+      "districts": [
+        "IN-9"
+      ]
+    },
+    {
+      "city": "Columbus",
+      "districts": [
+        "IN-6"
+      ]
+    },
+    {
+      "city": "Portage",
+      "districts": [
+        "IN-1"
+      ]
+    }
+  ],
+  "Ohio": [
+    {
+      "city": "Columbus",
+      "districts": [
+        "OH-3",
+        "OH-12"
+      ]
+    },
+    {
+      "city": "Cleveland",
+      "districts": [
+        "OH-11"
+      ]
+    },
+    {
+      "city": "Cincinnati",
+      "districts": [
+        "OH-1"
+      ]
+    },
+    {
+      "city": "Toledo",
+      "districts": [
+        "OH-9"
+      ]
+    },
+    {
+      "city": "Akron",
+      "districts": [
+        "OH-13"
+      ]
+    },
+    {
+      "city": "Dayton",
+      "districts": [
+        "OH-10"
+      ]
+    },
+    {
+      "city": "Parma",
+      "districts": [
+        "OH-16"
+      ]
+    },
+    {
+      "city": "Canton",
+      "districts": [
+        "OH-7"
+      ]
+    },
+    {
+      "city": "Youngstown",
+      "districts": [
+        "OH-13"
+      ]
+    },
+    {
+      "city": "Lorain",
+      "districts": [
+        "OH-9"
+      ]
+    },
+    {
+      "city": "Hamilton",
+      "districts": [
+        "OH-8"
+      ]
+    },
+    {
+      "city": "Springfield",
+      "districts": [
+        "OH-10"
+      ]
+    },
+    {
+      "city": "Kettering",
+      "districts": [
+        "OH-10"
+      ]
+    },
+    {
+      "city": "Elyria",
+      "districts": [
+        "OH-9"
+      ]
+    },
+    {
+      "city": "Lakewood",
+      "districts": [
+        "OH-9"
+      ]
+    },
+    {
+      "city": "Cuyahoga Falls",
+      "districts": [
+        "OH-13"
+      ]
+    },
+    {
+      "city": "Middletown",
+      "districts": [
+        "OH-8"
+      ]
+    },
+    {
+      "city": "Euclid",
+      "districts": [
+        "OH-11"
+      ]
+    },
+    {
+      "city": "Newark",
+      "districts": [
+        "OH-12"
+      ]
+    },
+    {
+      "city": "Mansfield",
+      "districts": [
+        "OH-12"
+      ]
+    },
+    {
+      "city": "Mentor",
+      "districts": [
+        "OH-14"
+      ]
+    },
+    {
+      "city": "Beavercreek",
+      "districts": [
+        "OH-10"
+      ]
+    },
+    {
+      "city": "Cleveland Heights",
+      "districts": [
+        "OH-11"
+      ]
+    },
+    {
+      "city": "Strongsville",
+      "districts": [
+        "OH-16"
+      ]
+    },
+    {
+      "city": "Dublin",
+      "districts": [
+        "OH-12"
+      ]
+    },
+    {
+      "city": "Fairfield",
+      "districts": [
+        "OH-8"
+      ]
+    },
+    {
+      "city": "Findlay",
+      "districts": [
+        "OH-5"
+      ]
+    },
+    {
+      "city": "Warren",
+      "districts": [
+        "OH-13"
+      ]
+    },
+    {
+      "city": "Lancaster",
+      "districts": [
+        "OH-15"
+      ]
+    },
+    {
+      "city": "Lima",
+      "districts": [
+        "OH-4"
+      ]
+    },
+    {
+      "city": "Huber Heights",
+      "districts": [
+        "OH-10"
+      ]
+    },
+    {
+      "city": "Westerville",
+      "districts": [
+        "OH-12"
+      ]
+    },
+    {
+      "city": "Marion",
+      "districts": [
+        "OH-4"
+      ]
+    },
+    {
+      "city": "Grove City",
+      "districts": [
+        "OH-15"
+      ]
+    }
+  ],
+  "North Carolina": [
+    {
+      "city": "Charlotte",
+      "districts": [
+        "NC-9",
+        "NC-12"
+      ]
+    },
+    {
+      "city": "Raleigh",
+      "districts": [
+        "NC-2"
+      ]
+    },
+    {
+      "city": "Greensboro",
+      "districts": [
+        "NC-6"
+      ]
+    },
+    {
+      "city": "Durham",
+      "districts": [
+        "NC-4"
+      ]
+    },
+    {
+      "city": "Winston-Salem",
+      "districts": [
+        "NC-5"
+      ]
+    },
+    {
+      "city": "Fayetteville",
+      "districts": [
+        "NC-8"
+      ]
+    },
+    {
+      "city": "Cary",
+      "districts": [
+        "NC-4"
+      ]
+    },
+    {
+      "city": "Wilmington",
+      "districts": [
+        "NC-7"
+      ]
+    },
+    {
+      "city": "High Point",
+      "districts": [
+        "NC-6"
+      ]
+    },
+    {
+      "city": "Greenville",
+      "districts": [
+        "NC-1"
+      ]
+    },
+    {
+      "city": "Asheville",
+      "districts": [
+        "NC-11"
+      ]
+    },
+    {
+      "city": "Concord",
+      "districts": [
+        "NC-12"
+      ]
+    },
+    {
+      "city": "Gastonia",
+      "districts": [
+        "NC-10"
+      ]
+    },
+    {
+      "city": "Jacksonville",
+      "districts": [
+        "NC-3"
+      ]
+    },
+    {
+      "city": "Chapel Hill",
+      "districts": [
+        "NC-4"
+      ]
+    },
+    {
+      "city": "Rocky Mount",
+      "districts": [
+        "NC-1"
+      ]
+    },
+    {
+      "city": "Burlington",
+      "districts": [
+        "NC-6"
+      ]
+    },
+    {
+      "city": "Wilson",
+      "districts": [
+        "NC-1"
+      ]
+    },
+    {
+      "city": "Huntersville",
+      "districts": [
+        "NC-12"
+      ]
+    },
+    {
+      "city": "Kannapolis",
+      "districts": [
+        "NC-8"
+      ]
+    },
+    {
+      "city": "Apex",
+      "districts": [
+        "NC-2"
+      ]
+    },
+    {
+      "city": "Hickory",
+      "districts": [
+        "NC-10"
+      ]
+    },
+    {
+      "city": "Goldsboro",
+      "districts": [
+        "NC-1"
+      ]
+    }
+  ],
+  "Michigan": [
+    {
+      "city": "Detroit",
+      "districts": [
+        "MI-13",
+        "MI-14"
+      ]
+    },
+    {
+      "city": "Grand Rapids",
+      "districts": [
+        "MI-3"
+      ]
+    },
+    {
+      "city": "Warren",
+      "districts": [
+        "MI-9"
+      ]
+    },
+    {
+      "city": "Sterling Heights",
+      "districts": [
+        "MI-10"
+      ]
+    },
+    {
+      "city": "Ann Arbor",
+      "districts": [
+        "MI-12"
+      ]
+    },
+    {
+      "city": "Lansing",
+      "districts": [
+        "MI-8"
+      ]
+    },
+    {
+      "city": "Flint",
+      "districts": [
+        "MI-5"
+      ]
+    },
+    {
+      "city": "Dearborn",
+      "districts": [
+        "MI-12"
+      ]
+    },
+    {
+      "city": "Livonia",
+      "districts": [
+        "MI-11"
+      ]
+    },
+    {
+      "city": "Westland",
+      "districts": [
+        "MI-13"
+      ]
+    },
+    {
+      "city": "Troy",
+      "districts": [
+        "MI-11"
+      ]
+    },
+    {
+      "city": "Farmington Hills",
+      "districts": [
+        "MI-14"
+      ]
+    },
+    {
+      "city": "Kalamazoo",
+      "districts": [
+        "MI-6"
+      ]
+    },
+    {
+      "city": "Wyoming",
+      "districts": [
+        "MI-3"
+      ]
+    },
+    {
+      "city": "Southfield",
+      "districts": [
+        "MI-14"
+      ]
+    },
+    {
+      "city": "Rochester Hills",
+      "districts": [
+        "MI-8"
+      ]
+    },
+    {
+      "city": "Taylor",
+      "districts": [
+        "MI-12"
+      ]
+    },
+    {
+      "city": "Pontiac",
+      "districts": [
+        "MI-14"
+      ]
+    },
+    {
+      "city": "St. Clair Shores",
+      "districts": [
+        "MI-9"
+      ]
+    },
+    {
+      "city": "Royal Oak",
+      "districts": [
+        "MI-9"
+      ]
+    },
+    {
+      "city": "Novi",
+      "districts": [
+        "MI-11"
+      ]
+    },
+    {
+      "city": "Dearborn Heights",
+      "districts": [
+        "MI-12"
+      ]
+    },
+    {
+      "city": "Battle Creek",
+      "districts": [
+        "MI-3"
+      ]
+    },
+    {
+      "city": "Saginaw",
+      "districts": [
+        "MI-5"
+      ]
+    },
+    {
+      "city": "Kentwood",
+      "districts": [
+        "MI-3"
+      ]
+    },
+    {
+      "city": "East Lansing",
+      "districts": [
+        "MI-8"
+      ]
+    },
+    {
+      "city": "Roseville",
+      "districts": [
+        "MI-9"
+      ]
+    },
+    {
+      "city": "Portage",
+      "districts": [
+        "MI-6"
+      ]
+    },
+    {
+      "city": "Midland",
+      "districts": [
+        "MI-4"
+      ]
+    },
+    {
+      "city": "Lincoln Park",
+      "districts": [
+        "MI-12"
+      ]
+    },
+    {
+      "city": "Muskegon",
+      "districts": [
+        "MI-2"
+      ]
+    }
+  ],
+  "Tennessee": [
+    {
+      "city": "Memphis",
+      "districts": [
+        "TN-9"
+      ]
+    },
+    {
+      "city": "Nashville-Davidson",
+      "districts": [
+        "TN-5"
+      ]
+    },
+    {
+      "city": "Knoxville",
+      "districts": [
+        "TN-2"
+      ]
+    },
+    {
+      "city": "Chattanooga",
+      "districts": [
+        "TN-3"
+      ]
+    },
+    {
+      "city": "Clarksville",
+      "districts": [
+        "TN-7"
+      ]
+    },
+    {
+      "city": "Murfreesboro",
+      "districts": [
+        "TN-4"
+      ]
+    },
+    {
+      "city": "Jackson",
+      "districts": [
+        "TN-8"
+      ]
+    },
+    {
+      "city": "Franklin",
+      "districts": [
+        "TN-7"
+      ]
+    },
+    {
+      "city": "Johnson City",
+      "districts": [
+        "TN-1"
+      ]
+    },
+    {
+      "city": "Bartlett",
+      "districts": [
+        "TN-8"
+      ]
+    },
+    {
+      "city": "Hendersonville",
+      "districts": [
+        "TN-6"
+      ]
+    },
+    {
+      "city": "Kingsport",
+      "districts": [
+        "TN-1"
+      ]
+    },
+    {
+      "city": "Collierville",
+      "districts": [
+        "TN-8"
+      ]
+    },
+    {
+      "city": "Cleveland",
+      "districts": [
+        "TN-3"
+      ]
+    },
+    {
+      "city": "Smyrna",
+      "districts": [
+        "TN-4"
+      ]
+    },
+    {
+      "city": "Germantown",
+      "districts": [
+        "TN-8"
+      ]
+    },
+    {
+      "city": "Brentwood",
+      "districts": [
+        "TN-7"
+      ]
+    }
+  ],
+  "Massachusetts": [
+    {
+      "city": "Boston",
+      "districts": [
+        "MA-7",
+        "MA-8"
+      ]
+    },
+    {
+      "city": "Worcester",
+      "districts": [
+        "MA-2"
+      ]
+    },
+    {
+      "city": "Springfield",
+      "districts": [
+        "MA-1"
+      ]
+    },
+    {
+      "city": "Lowell",
+      "districts": [
+        "MA-3"
+      ]
+    },
+    {
+      "city": "Cambridge",
+      "districts": [
+        "MA-5"
+      ]
+    },
+    {
+      "city": "New Bedford",
+      "districts": [
+        "MA-9"
+      ]
+    },
+    {
+      "city": "Brockton",
+      "districts": [
+        "MA-8"
+      ]
+    },
+    {
+      "city": "Quincy",
+      "districts": [
+        "MA-8"
+      ]
+    },
+    {
+      "city": "Lynn",
+      "districts": [
+        "MA-6"
+      ]
+    },
+    {
+      "city": "Fall River",
+      "districts": [
+        "MA-9"
+      ]
+    },
+    {
+      "city": "Newton",
+      "districts": [
+        "MA-4"
+      ]
+    },
+    {
+      "city": "Lawrence",
+      "districts": [
+        "MA-3"
+      ]
+    },
+    {
+      "city": "Somerville",
+      "districts": [
+        "MA-7"
+      ]
+    },
+    {
+      "city": "Waltham",
+      "districts": [
+        "MA-5"
+      ]
+    },
+    {
+      "city": "Haverhill",
+      "districts": [
+        "MA-3"
+      ]
+    },
+    {
+      "city": "Malden",
+      "districts": [
+        "MA-5"
+      ]
+    },
+    {
+      "city": "Medford",
+      "districts": [
+        "MA-5"
+      ]
+    },
+    {
+      "city": "Taunton",
+      "districts": [
+        "MA-4"
+      ]
+    },
+    {
+      "city": "Chicopee",
+      "districts": [
+        "MA-1"
+      ]
+    },
+    {
+      "city": "Weymouth Town",
+      "districts": [
+        "MA-8"
+      ]
+    },
+    {
+      "city": "Revere",
+      "districts": [
+        "MA-7"
+      ]
+    },
+    {
+      "city": "Peabody",
+      "districts": [
+        "MA-6"
+      ]
+    },
+    {
+      "city": "Methuen",
+      "districts": [
+        "MA-3"
+      ]
+    },
+    {
+      "city": "Barnstable Town",
+      "districts": [
+        "MA-9"
+      ]
+    },
+    {
+      "city": "Pittsfield",
+      "districts": [
+        "MA-1"
+      ]
+    },
+    {
+      "city": "Attleboro",
+      "districts": [
+        "MA-4"
+      ]
+    },
+    {
+      "city": "Everett",
+      "districts": [
+        "MA-7"
+      ]
+    },
+    {
+      "city": "Salem",
+      "districts": [
+        "MA-6"
+      ]
+    },
+    {
+      "city": "Westfield",
+      "districts": [
+        "MA-1"
+      ]
+    },
+    {
+      "city": "Leominster",
+      "districts": [
+        "MA-2"
+      ]
+    },
+    {
+      "city": "Fitchburg",
+      "districts": [
+        "MA-2"
+      ]
+    },
+    {
+      "city": "Beverly",
+      "districts": [
+        "MA-6"
+      ]
+    },
+    {
+      "city": "Holyoke",
+      "districts": [
+        "MA-1"
+      ]
+    },
+    {
+      "city": "Marlborough",
+      "districts": [
+        "MA-3"
+      ]
+    },
+    {
+      "city": "Woburn",
+      "districts": [
+        "MA-5"
+      ]
+    },
+    {
+      "city": "Chelsea",
+      "districts": [
+        "MA-7"
+      ]
+    }
+  ],
+  "Washington": [
+    {
+      "city": "Seattle",
+      "districts": [
+        "WA-7"
+      ]
+    },
+    {
+      "city": "Spokane",
+      "districts": [
+        "WA-5"
+      ]
+    },
+    {
+      "city": "Tacoma",
+      "districts": [
+        "WA-6"
+      ]
+    },
+    {
+      "city": "Vancouver",
+      "districts": [
+        "WA-3"
+      ]
+    },
+    {
+      "city": "Bellevue",
+      "districts": [
+        "WA-1"
+      ]
+    },
+    {
+      "city": "Kent",
+      "districts": [
+        "WA-9"
+      ]
+    },
+    {
+      "city": "Everett",
+      "districts": [
+        "WA-2"
+      ]
+    },
+    {
+      "city": "Renton",
+      "districts": [
+        "WA-9"
+      ]
+    },
+    {
+      "city": "Yakima",
+      "districts": [
+        "WA-4"
+      ]
+    },
+    {
+      "city": "Federal Way",
+      "districts": [
+        "WA-9"
+      ]
+    },
+    {
+      "city": "Spokane Valley",
+      "districts": [
+        "WA-5"
+      ]
+    },
+    {
+      "city": "Bellingham",
+      "districts": [
+        "WA-2"
+      ]
+    },
+    {
+      "city": "Kennewick",
+      "districts": [
+        "WA-4"
+      ]
+    },
+    {
+      "city": "Auburn",
+      "districts": [
+        "WA-8"
+      ]
+    },
+    {
+      "city": "Pasco",
+      "districts": [
+        "WA-4"
+      ]
+    },
+    {
+      "city": "Marysville",
+      "districts": [
+        "WA-1"
+      ]
+    },
+    {
+      "city": "Lakewood",
+      "districts": [
+        "WA-10"
+      ]
+    },
+    {
+      "city": "Redmond",
+      "districts": [
+        "WA-1"
+      ]
+    },
+    {
+      "city": "Shoreline",
+      "districts": [
+        "WA-7"
+      ]
+    },
+    {
+      "city": "Richland",
+      "districts": [
+        "WA-4"
+      ]
+    },
+    {
+      "city": "Kirkland",
+      "districts": [
+        "WA-1"
+      ]
+    },
+    {
+      "city": "Burien",
+      "districts": [
+        "WA-9"
+      ]
+    },
+    {
+      "city": "Sammamish",
+      "districts": [
+        "WA-8"
+      ]
+    },
+    {
+      "city": "Olympia",
+      "districts": [
+        "WA-10"
+      ]
+    },
+    {
+      "city": "Lacey",
+      "districts": [
+        "WA-10"
+      ]
+    },
+    {
+      "city": "Edmonds",
+      "districts": [
+        "WA-7"
+      ]
+    },
+    {
+      "city": "Bremerton",
+      "districts": [
+        "WA-6"
+      ]
+    },
+    {
+      "city": "Puyallup",
+      "districts": [
+        "WA-10"
+      ]
+    }
+  ],
+  "Colorado": [
+    {
+      "city": "Denver",
+      "districts": [
+        "CO-1"
+      ]
+    },
+    {
+      "city": "Colorado Springs",
+      "districts": [
+        "CO-5"
+      ]
+    },
+    {
+      "city": "Aurora",
+      "districts": [
+        "CO-6"
+      ]
+    },
+    {
+      "city": "Fort Collins",
+      "districts": [
+        "CO-2"
+      ]
+    },
+    {
+      "city": "Lakewood",
+      "districts": [
+        "CO-7"
+      ]
+    },
+    {
+      "city": "Thornton",
+      "districts": [
+        "CO-8"
+      ]
+    },
+    {
+      "city": "Arvada",
+      "districts": [
+        "CO-7"
+      ]
+    },
+    {
+      "city": "Westminster",
+      "districts": [
+        "CO-7"
+      ]
+    },
+    {
+      "city": "Pueblo",
+      "districts": [
+        "CO-3"
+      ]
+    },
+    {
+      "city": "Centennial",
+      "districts": [
+        "CO-6"
+      ]
+    },
+    {
+      "city": "Boulder",
+      "districts": [
+        "CO-2"
+      ]
+    },
+    {
+      "city": "Greeley",
+      "districts": [
+        "CO-4"
+      ]
+    },
+    {
+      "city": "Longmont",
+      "districts": [
+        "CO-2"
+      ]
+    },
+    {
+      "city": "Loveland",
+      "districts": [
+        "CO-2"
+      ]
+    },
+    {
+      "city": "Grand Junction",
+      "districts": [
+        "CO-3"
+      ]
+    },
+    {
+      "city": "Broomfield",
+      "districts": [
+        "CO-7"
+      ]
+    },
+    {
+      "city": "Castle Rock",
+      "districts": [
+        "CO-4"
+      ]
+    },
+    {
+      "city": "Commerce City",
+      "districts": [
+        "CO-8"
+      ]
+    },
+    {
+      "city": "Parker",
+      "districts": [
+        "CO-4"
+      ]
+    },
+    {
+      "city": "Littleton",
+      "districts": [
+        "CO-6"
+      ]
+    },
+    {
+      "city": "Northglenn",
+      "districts": [
+        "CO-8"
+      ]
+    }
+  ],
+  "District of Columbia": [
+    {
+      "city": "Washington",
+      "districts": [
+        "DC-1"
+      ]
+    }
+  ],
+  "Maryland": [
+    {
+      "city": "Baltimore",
+      "districts": [
+        "MD-7"
+      ]
+    },
+    {
+      "city": "Frederick",
+      "districts": [
+        "MD-6"
+      ]
+    },
+    {
+      "city": "Rockville",
+      "districts": [
+        "MD-8"
+      ]
+    },
+    {
+      "city": "Gaithersburg",
+      "districts": [
+        "MD-6"
+      ]
+    },
+    {
+      "city": "Bowie",
+      "districts": [
+        "MD-5"
+      ]
+    },
+    {
+      "city": "Hagerstown",
+      "districts": [
+        "MD-6"
+      ]
+    },
+    {
+      "city": "Annapolis",
+      "districts": [
+        "MD-3"
+      ]
+    }
+  ],
+  "Kentucky": [
+    {
+      "city": "Louisville/Jefferson County",
+      "districts": [
+        "KY-3"
+      ]
+    },
+    {
+      "city": "Lexington-Fayette",
+      "districts": [
+        "KY-6"
+      ]
+    },
+    {
+      "city": "Bowling Green",
+      "districts": [
+        "KY-2"
+      ]
+    },
+    {
+      "city": "Owensboro",
+      "districts": [
+        "KY-2"
+      ]
+    },
+    {
+      "city": "Covington",
+      "districts": [
+        "KY-4"
+      ]
+    }
+  ],
+  "Oregon": [
+    {
+      "city": "Portland",
+      "districts": [
+        "OR-3"
+      ]
+    },
+    {
+      "city": "Eugene",
+      "districts": [
+        "OR-4"
+      ]
+    },
+    {
+      "city": "Salem",
+      "districts": [
+        "OR-5"
+      ]
+    },
+    {
+      "city": "Gresham",
+      "districts": [
+        "OR-3"
+      ]
+    },
+    {
+      "city": "Hillsboro",
+      "districts": [
+        "OR-1"
+      ]
+    },
+    {
+      "city": "Beaverton",
+      "districts": [
+        "OR-1"
+      ]
+    },
+    {
+      "city": "Bend",
+      "districts": [
+        "OR-2"
+      ]
+    },
+    {
+      "city": "Medford",
+      "districts": [
+        "OR-2"
+      ]
+    },
+    {
+      "city": "Springfield",
+      "districts": [
+        "OR-4"
+      ]
+    },
+    {
+      "city": "Corvallis",
+      "districts": [
+        "OR-4"
+      ]
+    },
+    {
+      "city": "Albany",
+      "districts": [
+        "OR-5"
+      ]
+    },
+    {
+      "city": "Tigard",
+      "districts": [
+        "OR-1"
+      ]
+    },
+    {
+      "city": "Lake Oswego",
+      "districts": [
+        "OR-5"
+      ]
+    },
+    {
+      "city": "Keizer",
+      "districts": [
+        "OR-5"
+      ]
+    }
+  ],
+  "Oklahoma": [
+    {
+      "city": "Oklahoma City",
+      "districts": [
+        "OK-5"
+      ]
+    },
+    {
+      "city": "Tulsa",
+      "districts": [
+        "OK-1"
+      ]
+    },
+    {
+      "city": "Norman",
+      "districts": [
+        "OK-4"
+      ]
+    },
+    {
+      "city": "Broken Arrow",
+      "districts": [
+        "OK-1"
+      ]
+    },
+    {
+      "city": "Lawton",
+      "districts": [
+        "OK-4"
+      ]
+    },
+    {
+      "city": "Edmond",
+      "districts": [
+        "OK-5"
+      ]
+    },
+    {
+      "city": "Moore",
+      "districts": [
+        "OK-4"
+      ]
+    },
+    {
+      "city": "Midwest City",
+      "districts": [
+        "OK-5"
+      ]
+    },
+    {
+      "city": "Enid",
+      "districts": [
+        "OK-3"
+      ]
+    },
+    {
+      "city": "Stillwater",
+      "districts": [
+        "OK-3"
+      ]
+    },
+    {
+      "city": "Muskogee",
+      "districts": [
+        "OK-2"
+      ]
+    }
+  ],
+  "Wisconsin": [
+    {
+      "city": "Milwaukee",
+      "districts": [
+        "WI-4"
+      ]
+    },
+    {
+      "city": "Madison",
+      "districts": [
+        "WI-2"
+      ]
+    },
+    {
+      "city": "Green Bay",
+      "districts": [
+        "WI-8"
+      ]
+    },
+    {
+      "city": "Kenosha",
+      "districts": [
+        "WI-1"
+      ]
+    },
+    {
+      "city": "Racine",
+      "districts": [
+        "WI-1"
+      ]
+    },
+    {
+      "city": "Appleton",
+      "districts": [
+        "WI-8"
+      ]
+    },
+    {
+      "city": "Waukesha",
+      "districts": [
+        "WI-5"
+      ]
+    },
+    {
+      "city": "Eau Claire",
+      "districts": [
+        "WI-3"
+      ]
+    },
+    {
+      "city": "Oshkosh",
+      "districts": [
+        "WI-6"
+      ]
+    },
+    {
+      "city": "Janesville",
+      "districts": [
+        "WI-1"
+      ]
+    },
+    {
+      "city": "West Allis",
+      "districts": [
+        "WI-4"
+      ]
+    },
+    {
+      "city": "La Crosse",
+      "districts": [
+        "WI-3"
+      ]
+    },
+    {
+      "city": "Sheboygan",
+      "districts": [
+        "WI-6"
+      ]
+    },
+    {
+      "city": "Wauwatosa",
+      "districts": [
+        "WI-5"
+      ]
+    },
+    {
+      "city": "Fond du Lac",
+      "districts": [
+        "WI-6"
+      ]
+    },
+    {
+      "city": "New Berlin",
+      "districts": [
+        "WI-5"
+      ]
+    },
+    {
+      "city": "Wausau",
+      "districts": [
+        "WI-7"
+      ]
+    },
+    {
+      "city": "Brookfield",
+      "districts": [
+        "WI-5"
+      ]
+    },
+    {
+      "city": "Greenfield",
+      "districts": [
+        "WI-4"
+      ]
+    },
+    {
+      "city": "Beloit",
+      "districts": [
+        "WI-2"
+      ]
+    }
+  ],
+  "Nevada": [
+    {
+      "city": "Las Vegas",
+      "districts": [
+        "NV-1",
+        "NV-3",
+        "NV-4"
+      ]
+    },
+    {
+      "city": "Henderson",
+      "districts": [
+        "NV-3"
+      ]
+    },
+    {
+      "city": "Reno",
+      "districts": [
+        "NV-2"
+      ]
+    },
+    {
+      "city": "North Las Vegas",
+      "districts": [
+        "NV-4"
+      ]
+    },
+    {
+      "city": "Sparks",
+      "districts": [
+        "NV-2"
+      ]
+    },
+    {
+      "city": "Carson City",
+      "districts": [
+        "NV-2"
+      ]
+    }
+  ],
+  "New Mexico": [
+    {
+      "city": "Albuquerque",
+      "districts": [
+        "NM-1"
+      ]
+    },
+    {
+      "city": "Las Cruces",
+      "districts": [
+        "NM-2"
+      ]
+    },
+    {
+      "city": "Rio Rancho",
+      "districts": [
+        "NM-3"
+      ]
+    },
+    {
+      "city": "Santa Fe",
+      "districts": [
+        "NM-3"
+      ]
+    },
+    {
+      "city": "Roswell",
+      "districts": [
+        "NM-2"
+      ]
+    },
+    {
+      "city": "Farmington",
+      "districts": [
+        "NM-3"
+      ]
+    },
+    {
+      "city": "Clovis",
+      "districts": [
+        "NM-3"
+      ]
+    }
+  ],
+  "Missouri": [
+    {
+      "city": "Kansas City",
+      "districts": [
+        "MO-5"
+      ]
+    },
+    {
+      "city": "St. Louis",
+      "districts": [
+        "MO-1"
+      ]
+    },
+    {
+      "city": "Springfield",
+      "districts": [
+        "MO-7"
+      ]
+    },
+    {
+      "city": "Independence",
+      "districts": [
+        "MO-6"
+      ]
+    },
+    {
+      "city": "Columbia",
+      "districts": [
+        "MO-4"
+      ]
+    },
+    {
+      "city": "Lee's Summit",
+      "districts": [
+        "MO-5"
+      ]
+    },
+    {
+      "city": "O'Fallon",
+      "districts": [
+        "MO-2"
+      ]
+    },
+    {
+      "city": "St. Joseph",
+      "districts": [
+        "MO-6"
+      ]
+    },
+    {
+      "city": "St. Charles",
+      "districts": [
+        "MO-3"
+      ]
+    },
+    {
+      "city": "St. Peters",
+      "districts": [
+        "MO-3"
+      ]
+    },
+    {
+      "city": "Blue Springs",
+      "districts": [
+        "MO-6"
+      ]
+    },
+    {
+      "city": "Florissant",
+      "districts": [
+        "MO-1"
+      ]
+    },
+    {
+      "city": "Joplin",
+      "districts": [
+        "MO-7"
+      ]
+    },
+    {
+      "city": "Chesterfield",
+      "districts": [
+        "MO-2"
+      ]
+    },
+    {
+      "city": "Jefferson City",
+      "districts": [
+        "MO-3"
+      ]
+    },
+    {
+      "city": "Cape Girardeau",
+      "districts": [
+        "MO-8"
+      ]
+    }
+  ],
+  "Virginia": [
+    {
+      "city": "Virginia Beach",
+      "districts": [
+        "VA-2"
+      ]
+    },
+    {
+      "city": "Norfolk",
+      "districts": [
+        "VA-3"
+      ]
+    },
+    {
+      "city": "Chesapeake",
+      "districts": [
+        "VA-3"
+      ]
+    },
+    {
+      "city": "Richmond",
+      "districts": [
+        "VA-4"
+      ]
+    },
+    {
+      "city": "Newport News",
+      "districts": [
+        "VA-3"
+      ]
+    },
+    {
+      "city": "Alexandria",
+      "districts": [
+        "VA-8"
+      ]
+    },
+    {
+      "city": "Hampton",
+      "districts": [
+        "VA-3"
+      ]
+    },
+    {
+      "city": "Roanoke",
+      "districts": [
+        "VA-6"
+      ]
+    },
+    {
+      "city": "Portsmouth",
+      "districts": [
+        "VA-3"
+      ]
+    },
+    {
+      "city": "Suffolk",
+      "districts": [
+        "VA-3"
+      ]
+    },
+    {
+      "city": "Lynchburg",
+      "districts": [
+        "VA-6"
+      ]
+    },
+    {
+      "city": "Harrisonburg",
+      "districts": [
+        "VA-6"
+      ]
+    },
+    {
+      "city": "Leesburg",
+      "districts": [
+        "VA-10"
+      ]
+    },
+    {
+      "city": "Charlottesville",
+      "districts": [
+        "VA-5"
+      ]
+    },
+    {
+      "city": "Danville",
+      "districts": [
+        "VA-5"
+      ]
+    },
+    {
+      "city": "Blacksburg",
+      "districts": [
+        "VA-9"
+      ]
+    },
+    {
+      "city": "Manassas",
+      "districts": [
+        "VA-10"
+      ]
+    }
+  ],
+  "Georgia": [
+    {
+      "city": "Atlanta",
+      "districts": [
+        "GA-5"
+      ]
+    },
+    {
+      "city": "Columbus",
+      "districts": [
+        "GA-2"
+      ]
+    },
+    {
+      "city": "Augusta-Richmond County",
+      "districts": [
+        "GA-12"
+      ]
+    },
+    {
+      "city": "Savannah",
+      "districts": [
+        "GA-1"
+      ]
+    },
+    {
+      "city": "Athens-Clarke County",
+      "districts": [
+        "GA-10"
+      ]
+    },
+    {
+      "city": "Sandy Springs",
+      "districts": [
+        "GA-6"
+      ]
+    },
+    {
+      "city": "Roswell",
+      "districts": [
+        "GA-6"
+      ]
+    },
+    {
+      "city": "Macon",
+      "districts": [
+        "GA-2"
+      ]
+    },
+    {
+      "city": "Johns Creek",
+      "districts": [
+        "GA-6"
+      ]
+    },
+    {
+      "city": "Albany",
+      "districts": [
+        "GA-2"
+      ]
+    },
+    {
+      "city": "Warner Robins",
+      "districts": [
+        "GA-8"
+      ]
+    },
+    {
+      "city": "Alpharetta",
+      "districts": [
+        "GA-6"
+      ]
+    },
+    {
+      "city": "Marietta",
+      "districts": [
+        "GA-11"
+      ]
+    },
+    {
+      "city": "Valdosta",
+      "districts": [
+        "GA-8"
+      ]
+    },
+    {
+      "city": "Smyrna",
+      "districts": [
+        "GA-11"
+      ]
+    },
+    {
+      "city": "Dunwoody",
+      "districts": [
+        "GA-6"
+      ]
+    }
+  ],
+  "Nebraska": [
+    {
+      "city": "Omaha",
+      "districts": [
+        "NE-2"
+      ]
+    },
+    {
+      "city": "Lincoln",
+      "districts": [
+        "NE-1"
+      ]
+    },
+    {
+      "city": "Bellevue",
+      "districts": [
+        "NE-1"
+      ]
+    },
+    {
+      "city": "Grand Island",
+      "districts": [
+        "NE-3"
+      ]
+    }
+  ],
+  "Minnesota": [
+    {
+      "city": "Minneapolis",
+      "districts": [
+        "MN-5"
+      ]
+    },
+    {
+      "city": "St. Paul",
+      "districts": [
+        "MN-4"
+      ]
+    },
+    {
+      "city": "Rochester",
+      "districts": [
+        "MN-1"
+      ]
+    },
+    {
+      "city": "Duluth",
+      "districts": [
+        "MN-8"
+      ]
+    },
+    {
+      "city": "Bloomington",
+      "districts": [
+        "MN-3"
+      ]
+    },
+    {
+      "city": "Brooklyn Park",
+      "districts": [
+        "MN-3"
+      ]
+    },
+    {
+      "city": "Plymouth",
+      "districts": [
+        "MN-3"
+      ]
+    },
+    {
+      "city": "St. Cloud",
+      "districts": [
+        "MN-6"
+      ]
+    },
+    {
+      "city": "Eagan",
+      "districts": [
+        "MN-2"
+      ]
+    },
+    {
+      "city": "Woodbury",
+      "districts": [
+        "MN-4"
+      ]
+    },
+    {
+      "city": "Maple Grove",
+      "districts": [
+        "MN-3"
+      ]
+    },
+    {
+      "city": "Eden Prairie",
+      "districts": [
+        "MN-3"
+      ]
+    },
+    {
+      "city": "Coon Rapids",
+      "districts": [
+        "MN-6"
+      ]
+    },
+    {
+      "city": "Burnsville",
+      "districts": [
+        "MN-2"
+      ]
+    },
+    {
+      "city": "Blaine",
+      "districts": [
+        "MN-6"
+      ]
+    },
+    {
+      "city": "Lakeville",
+      "districts": [
+        "MN-2"
+      ]
+    },
+    {
+      "city": "Minnetonka",
+      "districts": [
+        "MN-3"
+      ]
+    },
+    {
+      "city": "Apple Valley",
+      "districts": [
+        "MN-2"
+      ]
+    },
+    {
+      "city": "Edina",
+      "districts": [
+        "MN-3"
+      ]
+    },
+    {
+      "city": "St. Louis Park",
+      "districts": [
+        "MN-5"
+      ]
+    },
+    {
+      "city": "Mankato",
+      "districts": [
+        "MN-1"
+      ]
+    },
+    {
+      "city": "Maplewood",
+      "districts": [
+        "MN-4"
+      ]
+    },
+    {
+      "city": "Moorhead",
+      "districts": [
+        "MN-7"
+      ]
+    },
+    {
+      "city": "Shakopee",
+      "districts": [
+        "MN-2"
+      ]
+    }
+  ],
+  "Kansas": [
+    {
+      "city": "Wichita",
+      "districts": [
+        "KS-4"
+      ]
+    },
+    {
+      "city": "Overland Park",
+      "districts": [
+        "KS-3"
+      ]
+    },
+    {
+      "city": "Kansas City",
+      "districts": [
+        "KS-3"
+      ]
+    },
+    {
+      "city": "Olathe",
+      "districts": [
+        "KS-3"
+      ]
+    },
+    {
+      "city": "Topeka",
+      "districts": [
+        "KS-2"
+      ]
+    },
+    {
+      "city": "Lawrence",
+      "districts": [
+        "KS-2"
+      ]
+    },
+    {
+      "city": "Shawnee",
+      "districts": [
+        "KS-3"
+      ]
+    },
+    {
+      "city": "Manhattan",
+      "districts": [
+        "KS-1"
+      ]
+    },
+    {
+      "city": "Lenexa",
+      "districts": [
+        "KS-3"
+      ]
+    },
+    {
+      "city": "Salina",
+      "districts": [
+        "KS-1"
+      ]
+    },
+    {
+      "city": "Hutchinson",
+      "districts": [
+        "KS-1"
+      ]
+    }
+  ],
+  "Louisiana": [
+    {
+      "city": "New Orleans",
+      "districts": [
+        "LA-2"
+      ]
+    },
+    {
+      "city": "Baton Rouge",
+      "districts": [
+        "LA-6"
+      ]
+    },
+    {
+      "city": "Shreveport",
+      "districts": [
+        "LA-4"
+      ]
+    },
+    {
+      "city": "Lafayette",
+      "districts": [
+        "LA-3"
+      ]
+    },
+    {
+      "city": "Lake Charles",
+      "districts": [
+        "LA-3"
+      ]
+    },
+    {
+      "city": "Kenner",
+      "districts": [
+        "LA-2"
+      ]
+    },
+    {
+      "city": "Bossier City",
+      "districts": [
+        "LA-4"
+      ]
+    },
+    {
+      "city": "Monroe",
+      "districts": [
+        "LA-5"
+      ]
+    },
+    {
+      "city": "Alexandria",
+      "districts": [
+        "LA-5"
+      ]
+    }
+  ],
+  "Hawaii": [
+    {
+      "city": "Honolulu",
+      "districts": [
+        "HI-1"
+      ]
+    }
+  ],
+  "Alaska": [
+    {
+      "city": "Anchorage",
+      "districts": [
+        "AK-1"
+      ]
+    }
+  ],
+  "New Jersey": [
+    {
+      "city": "Newark",
+      "districts": [
+        "NJ-8",
+        "NJ-10"
+      ]
+    },
+    {
+      "city": "Jersey City",
+      "districts": [
+        "NJ-8"
+      ]
+    },
+    {
+      "city": "Paterson",
+      "districts": [
+        "NJ-9"
+      ]
+    },
+    {
+      "city": "Elizabeth",
+      "districts": [
+        "NJ-8"
+      ]
+    },
+    {
+      "city": "Clifton",
+      "districts": [
+        "NJ-11"
+      ]
+    },
+    {
+      "city": "Trenton",
+      "districts": [
+        "NJ-12"
+      ]
+    },
+    {
+      "city": "Camden",
+      "districts": [
+        "NJ-1"
+      ]
+    },
+    {
+      "city": "Passaic",
+      "districts": [
+        "NJ-9"
+      ]
+    },
+    {
+      "city": "Union City",
+      "districts": [
+        "NJ-8"
+      ]
+    },
+    {
+      "city": "Bayonne",
+      "districts": [
+        "NJ-10"
+      ]
+    },
+    {
+      "city": "East Orange",
+      "districts": [
+        "NJ-10"
+      ]
+    },
+    {
+      "city": "Vineland",
+      "districts": [
+        "NJ-2"
+      ]
+    },
+    {
+      "city": "New Brunswick",
+      "districts": [
+        "NJ-6"
+      ]
+    },
+    {
+      "city": "Hoboken",
+      "districts": [
+        "NJ-8"
+      ]
+    },
+    {
+      "city": "Perth Amboy",
+      "districts": [
+        "NJ-6"
+      ]
+    },
+    {
+      "city": "West New York",
+      "districts": [
+        "NJ-8"
+      ]
+    },
+    {
+      "city": "Plainfield",
+      "districts": [
+        "NJ-12"
+      ]
+    },
+    {
+      "city": "Hackensack",
+      "districts": [
+        "NJ-5"
+      ]
+    },
+    {
+      "city": "Sayreville",
+      "districts": [
+        "NJ-12"
+      ]
+    },
+    {
+      "city": "Kearny",
+      "districts": [
+        "NJ-8"
+      ]
+    },
+    {
+      "city": "Linden",
+      "districts": [
+        "NJ-8"
+      ]
+    },
+    {
+      "city": "Atlantic City",
+      "districts": [
+        "NJ-2"
+      ]
+    }
+  ],
+  "Idaho": [
+    {
+      "city": "Boise City",
+      "districts": [
+        "ID-1"
+      ]
+    },
+    {
+      "city": "Nampa",
+      "districts": [
+        "ID-1"
+      ]
+    },
+    {
+      "city": "Meridian",
+      "districts": [
+        "ID-1"
+      ]
+    },
+    {
+      "city": "Idaho Falls",
+      "districts": [
+        "ID-2"
+      ]
+    },
+    {
+      "city": "Pocatello",
+      "districts": [
+        "ID-2"
+      ]
+    },
+    {
+      "city": "Caldwell",
+      "districts": [
+        "ID-1"
+      ]
+    },
+    {
+      "city": "Coeur d'Alene",
+      "districts": [
+        "ID-1"
+      ]
+    },
+    {
+      "city": "Twin Falls",
+      "districts": [
+        "ID-2"
+      ]
+    }
+  ],
+  "Alabama": [
+    {
+      "city": "Birmingham",
+      "districts": [
+        "AL-7"
+      ]
+    },
+    {
+      "city": "Montgomery",
+      "districts": [
+        "AL-2"
+      ]
+    },
+    {
+      "city": "Mobile",
+      "districts": [
+        "AL-1"
+      ]
+    },
+    {
+      "city": "Huntsville",
+      "districts": [
+        "AL-5"
+      ]
+    },
+    {
+      "city": "Tuscaloosa",
+      "districts": [
+        "AL-4"
+      ]
+    },
+    {
+      "city": "Hoover",
+      "districts": [
+        "AL-6"
+      ]
+    },
+    {
+      "city": "Dothan",
+      "districts": [
+        "AL-2"
+      ]
+    },
+    {
+      "city": "Auburn",
+      "districts": [
+        "AL-3"
+      ]
+    },
+    {
+      "city": "Decatur",
+      "districts": [
+        "AL-5"
+      ]
+    },
+    {
+      "city": "Madison",
+      "districts": [
+        "AL-5"
+      ]
+    },
+    {
+      "city": "Florence",
+      "districts": [
+        "AL-4"
+      ]
+    },
+    {
+      "city": "Gadsden",
+      "districts": [
+        "AL-4"
+      ]
+    }
+  ],
+  "Iowa": [
+    {
+      "city": "Des Moines",
+      "districts": [
+        "IA-3"
+      ]
+    },
+    {
+      "city": "Cedar Rapids",
+      "districts": [
+        "IA-1"
+      ]
+    },
+    {
+      "city": "Davenport",
+      "districts": [
+        "IA-2"
+      ]
+    },
+    {
+      "city": "Sioux City",
+      "districts": [
+        "IA-4"
+      ]
+    },
+    {
+      "city": "Iowa City",
+      "districts": [
+        "IA-2"
+      ]
+    },
+    {
+      "city": "Waterloo",
+      "districts": [
+        "IA-1"
+      ]
+    },
+    {
+      "city": "Council Bluffs",
+      "districts": [
+        "IA-3"
+      ]
+    },
+    {
+      "city": "Ames",
+      "districts": [
+        "IA-4"
+      ]
+    },
+    {
+      "city": "West Des Moines",
+      "districts": [
+        "IA-3"
+      ]
+    },
+    {
+      "city": "Dubuque",
+      "districts": [
+        "IA-1"
+      ]
+    },
+    {
+      "city": "Ankeny",
+      "districts": [
+        "IA-3"
+      ]
+    },
+    {
+      "city": "Urbandale",
+      "districts": [
+        "IA-3"
+      ]
+    },
+    {
+      "city": "Cedar Falls",
+      "districts": [
+        "IA-1"
+      ]
+    }
+  ],
+  "Arkansas": [
+    {
+      "city": "Little Rock",
+      "districts": [
+        "AR-2"
+      ]
+    },
+    {
+      "city": "Fort Smith",
+      "districts": [
+        "AR-3"
+      ]
+    },
+    {
+      "city": "Fayetteville",
+      "districts": [
+        "AR-3"
+      ]
+    },
+    {
+      "city": "Springdale",
+      "districts": [
+        "AR-3"
+      ]
+    },
+    {
+      "city": "Jonesboro",
+      "districts": [
+        "AR-1"
+      ]
+    },
+    {
+      "city": "North Little Rock",
+      "districts": [
+        "AR-2"
+      ]
+    },
+    {
+      "city": "Conway",
+      "districts": [
+        "AR-2"
+      ]
+    },
+    {
+      "city": "Rogers",
+      "districts": [
+        "AR-3"
+      ]
+    },
+    {
+      "city": "Pine Bluff",
+      "districts": [
+        "AR-4"
+      ]
+    },
+    {
+      "city": "Bentonville",
+      "districts": [
+        "AR-3"
+      ]
+    }
+  ],
+  "Utah": [
+    {
+      "city": "Salt Lake City",
+      "districts": [
+        "UT-2"
+      ]
+    },
+    {
+      "city": "West Valley City",
+      "districts": [
+        "UT-4"
+      ]
+    },
+    {
+      "city": "Provo",
+      "districts": [
+        "UT-3"
+      ]
+    },
+    {
+      "city": "West Jordan",
+      "districts": [
+        "UT-4"
+      ]
+    },
+    {
+      "city": "Orem",
+      "districts": [
+        "UT-3"
+      ]
+    },
+    {
+      "city": "Sandy",
+      "districts": [
+        "UT-3"
+      ]
+    },
+    {
+      "city": "Ogden",
+      "districts": [
+        "UT-1"
+      ]
+    },
+    {
+      "city": "St. George",
+      "districts": [
+        "UT-2"
+      ]
+    },
+    {
+      "city": "Layton",
+      "districts": [
+        "UT-1"
+      ]
+    },
+    {
+      "city": "Taylorsville",
+      "districts": [
+        "UT-4"
+      ]
+    }
+  ],
+  "Rhode Island": [
+    {
+      "city": "Providence",
+      "districts": [
+        "RI-1"
+      ]
+    },
+    {
+      "city": "Cranston",
+      "districts": [
+        "RI-2"
+      ]
+    },
+    {
+      "city": "Warwick",
+      "districts": [
+        "RI-2"
+      ]
+    },
+    {
+      "city": "Pawtucket",
+      "districts": [
+        "RI-1"
+      ]
+    },
+    {
+      "city": "East Providence",
+      "districts": [
+        "RI-1"
+      ]
+    }
+  ],
+  "Mississippi": [
+    {
+      "city": "Jackson",
+      "districts": [
+        "MS-2"
+      ]
+    },
+    {
+      "city": "Gulfport",
+      "districts": [
+        "MS-4"
+      ]
+    },
+    {
+      "city": "Southaven",
+      "districts": [
+        "MS-1"
+      ]
+    },
+    {
+      "city": "Biloxi",
+      "districts": [
+        "MS-4"
+      ]
+    },
+    {
+      "city": "Hattiesburg",
+      "districts": [
+        "MS-4"
+      ]
+    },
+    {
+      "city": "Olive Branch",
+      "districts": [
+        "MS-1"
+      ]
+    },
+    {
+      "city": "Tupelo",
+      "districts": [
+        "MS-1"
+      ]
+    },
+    {
+      "city": "Meridian",
+      "districts": [
+        "MS-3"
+      ]
+    },
+    {
+      "city": "Greenville",
+      "districts": [
+        "MS-2"
+      ]
+    },
+    {
+      "city": "Horn Lake",
+      "districts": [
+        "MS-1"
+      ]
+    }
+  ],
+  "South Dakota": [
+    {
+      "city": "Sioux Falls",
+      "districts": [
+        "SD-1"
+      ]
+    },
+    {
+      "city": "Rapid City",
+      "districts": [
+        "SD-1"
+      ]
+    },
+    {
+      "city": "Aberdeen",
+      "districts": [
+        "SD-1"
+      ]
+    },
+    {
+      "city": "Brookings",
+      "districts": [
+        "SD-1"
+      ]
+    }
+  ],
+  "Connecticut": [
+    {
+      "city": "Bridgeport",
+      "districts": [
+        "CT-4"
+      ]
+    },
+    {
+      "city": "New Haven",
+      "districts": [
+        "CT-3"
+      ]
+    },
+    {
+      "city": "Stamford",
+      "districts": [
+        "CT-4"
+      ]
+    },
+    {
+      "city": "Hartford",
+      "districts": [
+        "CT-1"
+      ]
+    },
+    {
+      "city": "Waterbury",
+      "districts": [
+        "CT-5"
+      ]
+    },
+    {
+      "city": "Norwalk",
+      "districts": [
+        "CT-4"
+      ]
+    },
+    {
+      "city": "Danbury",
+      "districts": [
+        "CT-5"
+      ]
+    },
+    {
+      "city": "New Britain",
+      "districts": [
+        "CT-5"
+      ]
+    },
+    {
+      "city": "West Hartford",
+      "districts": [
+        "CT-1"
+      ]
+    },
+    {
+      "city": "Greenwich",
+      "districts": [
+        "CT-4"
+      ]
+    }
+  ],
+  "South Carolina": [
+    {
+      "city": "Columbia",
+      "districts": [
+        "SC-2"
+      ]
+    },
+    {
+      "city": "Charleston",
+      "districts": [
+        "SC-1"
+      ]
+    },
+    {
+      "city": "North Charleston",
+      "districts": [
+        "SC-1"
+      ]
+    },
+    {
+      "city": "Mount Pleasant",
+      "districts": [
+        "SC-1"
+      ]
+    },
+    {
+      "city": "Rock Hill",
+      "districts": [
+        "SC-5"
+      ]
+    },
+    {
+      "city": "Greenville",
+      "districts": [
+        "SC-4"
+      ]
+    },
+    {
+      "city": "Summerville",
+      "districts": [
+        "SC-1"
+      ]
+    },
+    {
+      "city": "Goose Creek",
+      "districts": [
+        "SC-1"
+      ]
+    },
+    {
+      "city": "Sumter",
+      "districts": [
+        "SC-5"
+      ]
+    },
+    {
+      "city": "Hilton Head Island",
+      "districts": [
+        "SC-1"
+      ]
+    }
+  ],
+  "New Hampshire": [
+    {
+      "city": "Manchester",
+      "districts": [
+        "NH-1"
+      ]
+    },
+    {
+      "city": "Nashua",
+      "districts": [
+        "NH-2"
+      ]
+    },
+    {
+      "city": "Concord",
+      "districts": [
+        "NH-2"
+      ]
+    }
+  ],
+  "North Dakota": [
+    {
+      "city": "Fargo",
+      "districts": [
+        "ND-1"
+      ]
+    },
+    {
+      "city": "Bismarck",
+      "districts": [
+        "ND-1"
+      ]
+    },
+    {
+      "city": "Grand Forks",
+      "districts": [
+        "ND-1"
+      ]
+    },
+    {
+      "city": "Minot",
+      "districts": [
+        "ND-1"
+      ]
+    }
+  ],
+  "Montana": [
+    {
+      "city": "Billings",
+      "districts": [
+        "MT-1"
+      ]
+    },
+    {
+      "city": "Missoula",
+      "districts": [
+        "MT-1"
+      ]
+    },
+    {
+      "city": "Great Falls",
+      "districts": [
+        "MT-1"
+      ]
+    },
+    {
+      "city": "Bozeman",
+      "districts": [
+        "MT-1"
+      ]
+    }
+  ],
+  "Delaware": [
+    {
+      "city": "Wilmington",
+      "districts": [
+        "DE-1"
+      ]
+    },
+    {
+      "city": "Dover",
+      "districts": [
+        "DE-1"
+      ]
+    }
+  ],
+  "Maine": [
+    {
+      "city": "Portland",
+      "districts": [
+        "ME-1"
+      ]
+    }
+  ],
+  "Wyoming": [
+    {
+      "city": "Cheyenne",
+      "districts": [
+        "WY-1"
+      ]
+    },
+    {
+      "city": "Casper",
+      "districts": [
+        "WY-1"
+      ]
+    }
+  ],
+  "West Virginia": [
+    {
+      "city": "Charleston",
+      "districts": [
+        "WV-2"
+      ]
+    },
+    {
+      "city": "Huntington",
+      "districts": [
+        "WV-3"
+      ]
+    },
+    {
+      "city": "Morgantown",
+      "districts": [
+        "WV-1"
+      ]
+    },
+    {
+      "city": "Parkersburg",
+      "districts": [
+        "WV-1"
+      ]
+    },
+    {
+      "city": "Wheeling",
+      "districts": [
+        "WV-1"
+      ]
+    },
+    {
+      "city": "Weirton",
+      "districts": [
+        "WV-1"
+      ]
+    },
+    {
+      "city": "Fairmont",
+      "districts": [
+        "WV-1"
+      ]
+    },
+    {
+      "city": "Beckley",
+      "districts": [
+        "WV-3"
+      ]
+    },
+    {
+      "city": "Martinsburg",
+      "districts": [
+        "WV-2"
+      ]
+    },
+    {
+      "city": "Clarksburg",
+      "districts": [
+        "WV-1"
+      ]
+    }
+  ],
+  "Vermont": [
+    {
+      "city": "Burlington",
+      "districts": [
+        "VT-1"
+      ]
+    }
+  ]
+}
