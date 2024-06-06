@@ -1,6 +1,6 @@
 import json as js
 import csv
-
+# !! TODO: city -> county mapping and deciphering codes in carbon intensity
 abrvs = {
     "Alabama": "AL",
     "Alaska": "AK",
@@ -75,6 +75,7 @@ weather = js.load(fweather)
 
 def main():
     cities = extractNamesAndStances(names)
+    print(cities['New York'])
     extractAirQuality(cities)
     extractCarbonIntensity(cities)
     extractWeather(cities)
@@ -108,20 +109,14 @@ def extractAirQuality(cities: dict):
         else:
             if aq[code].get('data'):
                 data = aq[code]['data']
-                name = data['city']['name']
-                if any([key in name for key in cities]) and any([k in name for k in abrvs]):
-                    
-                    k = [key if key in name else None for key in cities]
-                    k = [a for a in k if a]
-                    k = k[0]
-                    
-                    if not cities.get(k):
-                        cities[k]['aqi'] = data['aqi']
-                        cities[k]['idx'] = data['idx']
-                        if data['city'].get('geo'):
-                            cities[k]['Latitude'] = data['city']['geo'][0]
-                            cities[k]['Longitude'] = data['city']['geo'][1]
-
+                for n in data['city']['name'].split(','):
+                    n = n.strip()
+                    if cities.get(n):
+                        cities[n]["aqi"] = data['aqi']
+                        cities[n]["idx"] = data['idx']
+                        if data.get('city') and data['city'].get('geo'):
+                            cities[n]['Latitude'] = data['city']['geo'][0]
+                            cities[n]['Longitude'] = data['city']['geo'][1]
 
 def standardizeRisks():
     weights = {
@@ -135,14 +130,23 @@ def extractCarbonIntensity(cities: dict):
     pass
 
 def extractWeather(cities):
-    for city in weather:
-        if city['location']['country'] == "United States of America" and cities.get(city['location']['name'], None):
-            for attr in city['current']:
-                if not "_c" in attr and attr not in ["last_updated_epoch", "last_updated", "condition"]:
-                    cities[city['location']['name']][attr] = city['current'][attr]
-        else:
-            weather.remove(city)
+    for city in cities:
+
+        for w in weather:
+            if w['location']['name'] == cities[city]['city']:
+                for attr in w['current']:
+                    if not "_c" in attr and attr not in ["last_updated_epoch", "last_updated", "condition", "wind_dir", "pressure_mb", "precip_mm", "vis_km", "gust_kph", "wind_kph"]:
+                        cities[w['location']['name']][attr] = w['current'][attr]
+
+def outputModeling(cities, prefs):
+    for pref in prefs:
+        try:
+            str = int(cities.get(pref))
             
+        except:
+            pass
+    
+
 def write(cities):
     name = "livability/data/unified.csv"
     with open(name, 'w', newline='') as file:
