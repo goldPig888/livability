@@ -139,13 +139,21 @@ def extractWeather(cities):
                         cities[w['location']['name']][attr] = w['current'][attr]
 
 def outputModeling(cities, prefs):
-    for pref in prefs:
-        try:
-            str = int(cities.get(pref))
+    for city in cities:
+        for pref in prefs:
+            k = 1
+            max = 1
+            try:
+                str = int(cities[city].get(pref))
+                max -= k * ((str - int(prefs[pref])) ** 2) / (int(prefs[pref]) * 100)
+            except:
+                pass
+        max *= 100
+        print("Livability: ", max)
+        cities[city]["Livability"] = max
+        
             
-        except:
-            pass
-    
+        
 
 def write(cities):
     name = "livability/data/unified.csv"
