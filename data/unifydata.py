@@ -1,5 +1,6 @@
 import json as js
 import csv
+import pprint as urcute
 # !! TODO: city -> county mapping and deciphering codes in carbon intensity
 abrvs = {
     "Alabama": "AL",
@@ -62,24 +63,25 @@ abrvs = {
     "Wisconsin": "WI",
     "Wyoming": "WY"
 }
-fnames = open('livability/data/usDistricts.json') # Done
+fnames = open('data/usDistricts.json') # Done
 names = js.load(fnames) # Done
-faq = open('livability/data/airQuality.json') # should be good awaiting testing
+faq = open('data/airQuality.json') # should be good awaiting testing
 aq = js.load(faq) # should be good
-fcarbon = open('livability/data/carbonIntensityData.json')
+fcarbon = open('data/carbonIntensityCity.json') # Done
 carbons = js.load(fcarbon)
-fstance = open('livability/data/environmentalStance.json') # Done
+fstance = open('data/environmentalStance.json') # Done
 stances = js.load(fstance) # Done
-fweather = open('livability/data/weather.json')
+fweather = open('data/weather.json')
 weather = js.load(fweather)
 
 def main():
     cities = extractNamesAndStances(names)
-    print(cities['New York'])
+    #print(cities['New York'])
     extractAirQuality(cities)
     extractCarbonIntensity(cities)
     extractWeather(cities)
     write(cities)
+    urcute.pprint(cities['New York'])
 
 def extractNamesAndStances(n: dict):
     cities = {}
@@ -127,7 +129,10 @@ def standardizeRisks():
         "Very High": 0.05277782
     }
 def extractCarbonIntensity(cities: dict):
-    pass
+    for city, intensity in carbons.items():
+        if city in cities:
+            cities[city]['carbon_intensity'] = intensity
+
 
 def extractWeather(cities):
     for city in cities:
@@ -148,7 +153,7 @@ def outputModeling(cities, prefs):
     
 
 def write(cities):
-    name = "livability/data/unified.csv"
+    name = "data/unified.csv"
     with open(name, 'w', newline='') as file:
         keys = [] + list(cities['Houston'].keys())
         writer = csv.DictWriter(file, fieldnames=keys)
