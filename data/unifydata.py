@@ -1,6 +1,8 @@
 import json as js
 import csv
+from math import radians, sin, cos, sqrt, atan2
 import pprint as urcute
+
 # !! TODO: city -> county mapping and deciphering codes in carbon intensity
 abrvs = {
     "Alabama": "AL",
@@ -63,16 +65,20 @@ abrvs = {
     "Wisconsin": "WI",
     "Wyoming": "WY"
 }
-fnames = open('livability/data/usDistricts.json') # Done
+fnames = open('data/usDistricts.json') # Done
 names = js.load(fnames) # Done
-faq = open('livability/data/airQuality.json') # should be good awaiting testing
+faq = open('data/airQuality.json') # Done
 aq = js.load(faq) # should be good
-fcarbon = open('livability/data/carbonIntensityCity.json') # Done
+fcarbon = open('data/carbonIntensityCity.json') # Done
 carbons = js.load(fcarbon)
-fstance = open('livability/data/environmentalStance.json') # Done
+fstance = open('data/environmentalStance.json') # Done
 stances = js.load(fstance) # Done
-fweather = open('livability/data/weather.json')
+fweather = open('data/weather.json')
 weather = js.load(fweather)
+
+fcoords = open('data/cityCoords.json') # coordinates data
+coords = js.load(fcoords) # coordinates data
+
 
 def main():
     cities = extractNamesAndStances(names)
@@ -81,7 +87,8 @@ def main():
     extractCarbonIntensity(cities)
     extractWeather(cities)
     write(cities)
-    urcute.pprint(cities['New York'])
+    urcute.pprint(cities['Albany'])
+
 
 def extractNamesAndStances(n: dict):
     cities = {}
@@ -104,22 +111,53 @@ def extractNamesAndStances(n: dict):
 
 # if the name of the location has the name of an existing location in the dict in it, set aqi in the dict
             
-def extractAirQuality(cities: dict):
-    for code in aq:
-        if aq[code].get('status') and aq[code]['status'] != "ok":
-            pass
-        else:
-            if aq[code].get('data'):
-                data = aq[code]['data']
-                for n in data['city']['name'].split(','):
-                    n = n.strip()
-                    if cities.get(n):
-                        cities[n]["aqi"] = data['aqi']
-                        cities[n]["idx"] = data['idx']
-                        if data.get('city') and data['city'].get('geo'):
-                            cities[n]['Latitude'] = data['city']['geo'][0]
-                            cities[n]['Longitude'] = data['city']['geo'][1]
+            
+def haversine(lat1, lon1, lat2, lon2):
+    R = 6371.0 # this is earth radius in km
+    lat1, lon1, lat2, lon2 = map(float, [lat1, lon1, lat2, lon2])
+    lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+    return R * c
 
+
+def extractAirQuality(cities: dict):
+    #count = 0
+    #this is coordsmaxxing the missing ones
+    for city in cities:
+        if 'Latitude' not in cities[city] or 'Longitude' not in cities[city]:
+            coord_entry = next((item for item in coords if item['city'] == city), None)
+            if coord_entry:
+                cities[city]['Latitude'] = coord_entry['latitude']
+                cities[city]['Longitude'] = coord_entry['longitude']
+            else:
+                #print(f"{count} no coords found for city: {city}")
+                #count+=1
+                continue
+            
+        city_lat, city_lon = float(cities[city]['Latitude']), float(cities[city]['Longitude'])
+        closest_aqi = None
+        min_distance = float('inf')
+        for code in aq:
+            if aq[code].get('status') != "ok":
+                continue
+            if 'data' in aq[code] and isinstance(aq[code]['data'], dict):
+                data = aq[code]['data']
+                if 'geo' in data['city'] and isinstance(data['city']['geo'], list):
+                    lat, lon = data['city']['geo']
+                    distance = haversine(city_lat, city_lon, lat, lon)
+                    if distance < min_distance:
+                        min_distance = distance
+                        closest_aqi = data
+        if closest_aqi:
+            cities[city]["aqi"] = closest_aqi['aqi']
+            cities[city]["idx"] = closest_aqi['idx']
+            cities[city]['Latitude'] = closest_aqi['city']['geo'][0]
+            cities[city]['Longitude'] = closest_aqi['city']['geo'][1]
+            
+            
 def standardizeRisks():
     weights = {
         "Relatively Low": 0.0166666668,
@@ -128,6 +166,8 @@ def standardizeRisks():
         "Relatively High": .0388888892,
         "Very High": 0.05277782
     }
+    
+    
 def extractCarbonIntensity(cities: dict):
     for city, intensity in carbons.items():
         if city in cities:
@@ -142,6 +182,7 @@ def extractWeather(cities):
                 for attr in w['current']:
                     if not "_c" in attr and attr not in ["last_updated_epoch", "last_updated", "condition", "wind_dir", "pressure_mb", "precip_mm", "vis_km", "gust_kph", "wind_kph"]:
                         cities[w['location']['name']][attr] = w['current'][attr]
+
 
 def outputModeling(cities, prefs):
     for city in cities:
@@ -160,8 +201,9 @@ def outputModeling(cities, prefs):
             
         
 
+
 def write(cities):
-    name = "livability/data/unified.csv"
+    name = "data/unified.csv"
     with open(name, 'w', newline='') as file:
         keys = [] + list(cities['Houston'].keys())
         writer = csv.DictWriter(file, fieldnames=keys)
