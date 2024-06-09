@@ -15,15 +15,16 @@ class Model:
     def fit(self) -> None:
         self.model.fit(self.x_train, self.y_train)
 
-    def predict(self,test) -> pd.ndarray:
+    def predict(self,test: iter) -> pd.ndarray:
         return self.model.predict(test)
     
     def score(self, observed, preferred):
         sd = self.sd()
         _zstat = (float(observed['livability']) - float(preferred['livability'])) / (sd / (len(self.df.index) ** 0.5))
-        return norm.cdf(_zstat, loc=0, scale=1)
+        return norm.cdf(_zstat, loc=0, scale=1)[len(norm.cdf(_zstat, loc=0, scale=1)) - 1]
     def sd(self):
         return np.std(self.Y)
+    
 
 
 

@@ -63,15 +63,15 @@ abrvs = {
     "Wisconsin": "WI",
     "Wyoming": "WY"
 }
-fnames = open('data/usDistricts.json') # Done
+fnames = open('livability/data/usDistricts.json') # Done
 names = js.load(fnames) # Done
-faq = open('data/airQuality.json') # should be good awaiting testing
+faq = open('livability/data/airQuality.json') # should be good awaiting testing
 aq = js.load(faq) # should be good
-fcarbon = open('data/carbonIntensityCity.json') # Done
+fcarbon = open('livability/data/carbonIntensityCity.json') # Done
 carbons = js.load(fcarbon)
-fstance = open('data/environmentalStance.json') # Done
+fstance = open('livability/data/environmentalStance.json') # Done
 stances = js.load(fstance) # Done
-fweather = open('data/weather.json')
+fweather = open('livability/data/weather.json')
 weather = js.load(fweather)
 
 def main():
@@ -161,7 +161,7 @@ def outputModeling(cities, prefs):
         
 
 def write(cities):
-    name = "data/unified.csv"
+    name = "livability/data/unified.csv"
     with open(name, 'w', newline='') as file:
         keys = [] + list(cities['Houston'].keys())
         writer = csv.DictWriter(file, fieldnames=keys)
