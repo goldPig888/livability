@@ -1,15 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Element selection
     const subheading = document.querySelector(".livability-subheading");
     const button = document.querySelector(".shadow-btn");
-    const startPage = document.querySelector(".startpage");
+    const startPage = document.querySelector(".start-page");
+    const personalizationPage = document.querySelector(".personalization-page");
 
     // Animation Timing Settings
     const subheadingDelay = 1000;
     const buttonAppearDelay = 3000;
     const fadeOutDuration = 2500;
-
-
 
     // Animate the subheading to fade in
     setTimeout(() => {
@@ -23,18 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
         button.style.transform = 'translateY(0)';
     }, buttonAppearDelay);
 
-
-
     // Button handlers
-    // Change button color on mousedown
     button.addEventListener("mousedown", function() {
         button.classList.add("shadow-btn-clicked");
     });
 
-    // Revert button color on mouseup and mouseleave
     button.addEventListener("mouseup", function() {
         button.classList.remove("shadow-btn-clicked");
     });
+
     button.addEventListener("mouseleave", function() {
         button.classList.remove("shadow-btn-clicked");
     });
@@ -44,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
         startPage.style.opacity = '0';
         setTimeout(() => {
             startPage.style.display = 'none';
+            
+            personalizationPage.classList.add("visible");
         }, fadeOutDuration);
     });
 });
-
-
