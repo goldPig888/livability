@@ -1,0 +1,31 @@
+.shadow-btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+
+.shadow-btn {
+    background: rgb(44, 176, 99);
+    box-shadow: 0 0 25px rgb(0, 255, 85);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s;
+}
+
+.shadow-btn:hover {
+    box-shadow: 0 0 5px rgb(0, 255, 217),
+        0 0 25px rgb(0, 140, 255),
+        0 0 50px rgb(0, 140, 255),
+        0 0 100px rgb(0, 140, 255);
+}
+
+.shadow-btn-clicked {
+    background: rgb(41, 197, 208);
+}
