@@ -11,21 +11,10 @@
 
 <body>
 
-    <div class="app-bar">
-        <div class="logo-container">
-            <img src="../static/images/tree.png" alt="Tree Image">
-            <div class="app-title">Livability</div>
-        </div>
-        <div class="nav-links">
-            <div class="about">About</div>
-            <div class="contact">Contact</div>
-        </div>
-    </div>
-
-    <div class="overlay"></div>
 
     <!----------- START PAGE ----------->
     <div class="start-page">
+        <div class="overlay"></div>
         <video autoplay muted loop class="video-background">
             <source src="../static/images/forest.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -45,12 +34,60 @@
     <!----------- PERSONALIZATION PAGE ----------->
 
     <div class="personalization-page">
-        <div class="sidebar"></div>
+
+        <div class="app-bar">
+            <div class="logo-container" id="logo-container">
+                <img src="../static/images/tree.png" alt="Tree Image">
+                <div class="app-title">Livability</div>
+            </div>
+            
+            <div class="nav-links">
+                <div class="about">About</div>
+                <div class="contact">Contact</div>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <!----------- SIDEBAR ----------->
+
+        <div class="sidebar">
+            <div class="glow"></div>
+
+                <div class="option">
+                    <button class="option-btn">Location information</button>
+                </div>
+
+                <div class="option">
+                    <button class="option-btn">Environmental stance</button>
+                </div>
+
+                <div class="option">
+                    <button class="option-btn">Air Quality Index</button>
+                </div>
+
+                <div class="option">
+                    <button class="option-btn">Carbon Intensity</button>
+                </div>
+
+                <div class="option">
+                    <button class="option-btn">Temperature</button>
+                </div>
+
+                <div class="option">
+                    <button class="option-btn">Humidity</button>
+                </div>
+
+                <div class="option">
+                    <button class="option-btn">Wind</button>
+                </div>
+
+            </div>
+        <!------------------------------->
+
 
 
     </div>
-
-    
 
     <!-------------------------------------------->
 

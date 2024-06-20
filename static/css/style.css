@@ -4,7 +4,8 @@ body {
     color: white;
     background: linear-gradient(360deg, #65928F 17%, #35476C 100%);
     overflow: hidden;
-    z-index: 2;
+    position: relative;
+    z-index: 3;
 }
 
 .start-page {
@@ -33,13 +34,13 @@ body {
     height: 5vh;
     min-width: fit-content;
     display: flex;
-    position: fixed;
     justify-content: space-between;
     align-items: center;
     background: #21283F;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     padding: 15px;
     z-index: 3;
+    position: relative;
     gap: 50%;
 }
 
@@ -131,23 +132,16 @@ img {
 /* PERSONALIZATION PAGE */
 .personalization-page {
     transition: opacity 2.5s ease-out, transform 2.5s ease-out;
-    opacity: 0; 
-    transform: translateY(20px);
-    display: flex;
-    flex-direction: row;
+    opacity: 0;
+    flex-wrap: wrap;
     height: 100vh;
     position: relative;
+    background: linear-gradient(360deg,
+            rgba(101, 146, 143, 1) 17.325544357299805%,
+            rgba(53, 71, 108, 1) 100%);
 }
 
 .personalization-page.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.sidebar {
-    transition: opacity 2.5s ease-out, transform 2.5s ease-out;
-    width: 28%;
-    height: 100vh;
-    background: linear-gradient(180deg, rgba(20, 32, 10, 0.62) 0%, rgba(37, 115, 39, 0.62) 82.5%);
-    box-shadow: 0px 12px 25.7px 11px rgba(0, 0, 0, 0.25);
 }

@@ -1,14 +1,17 @@
+/* START BUTTON */
 .shadow-btn {
     padding: 10px 20px;
     border: none;
     font-size: 17px;
     color: #fff;
+    font-family: 'Bai Jamjuree', sans-serif;
     border-radius: 7px;
     letter-spacing: 4px;
     font-weight: 700;
     text-transform: uppercase;
     transition: 0.5s;
     transition-property: box-shadow;
+    z-index: 3;
 }
 
 .shadow-btn {
@@ -28,4 +31,57 @@
 
 .shadow-btn-clicked {
     background: rgb(41, 197, 208);
+}
+
+
+
+/* SIDEBAR */
+.sidebar {
+    position: relative; /* Establishes positioning context */
+    background: linear-gradient(90deg, rgba(20, 32, 10, 0.62) 0%, rgba(37, 115, 39, 0.62) 82.5%);
+    opacity: 0.70;
+    width: 25%;
+    height: 100vh; /* Using viewport height instead of -webkit-fill-available */
+    flex-direction: column;
+    padding: 20px;
+    z-index: 4; 
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from -53.99deg at 50% 50%, rgba(242, 98, 181, 0) 11.002%, rgba(95, 197, 255, 0.4) 42.948%, rgba(255, 172, 137, 0.4) 64.694%, rgba(129, 85, 255, 0.4) 80.8%, rgba(120, 157, 255, 0.4) 86.203%, rgba(159, 115, 241, 0) 96.303%);
+    border-radius: 10px;
+    opacity: 0.60;
+    filter: blur(50px);
+    z-index: 3; /* Ensure it's below the buttons */
+}
+
+
+.option {
+    margin-bottom: 10px;
+    border-color: #2670e9;
+
+}
+.option-btn {
+    position: relative;
+    z-index: 3; /* Higher than the glow's z-index */
+    background: transparent;
+    color: var(--light-green, #c4fdc6);
+    font-family: 'Bai Jamjuree', sans-serif;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.option-btn:hover {
+    background-color: #ffffff;
+    color: #35476C;
 }
