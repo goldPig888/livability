@@ -11,7 +11,6 @@
 
 <body>
 
-
     <!----------- START PAGE ----------->
     <div class="start-page">
         <div class="overlay"></div>
@@ -30,7 +29,6 @@
     </div>
     <!----------------------------------->
 
-
     <!----------- PERSONALIZATION PAGE ----------->
 
     <div class="personalization-page">
@@ -40,19 +38,19 @@
                 <img src="../static/images/tree.png" alt="Tree Image">
                 <div class="app-title">Livability</div>
             </div>
-            
+
             <div class="nav-links">
                 <div class="about">About</div>
                 <div class="contact">Contact</div>
             </div>
         </div>
 
-        <div class="overlay"></div>
 
-        <!----------- SIDEBAR ----------->
+        <div class="screen">
+            <!----------- SIDEBAR ----------->
 
-        <div class="sidebar">
-            <div class="glow"></div>
+            <div class="sidebar">
+                <div class="glow"></div>
 
                 <div class="option">
                     <button class="option-btn">Location information</button>
@@ -75,24 +73,128 @@
                 </div>
 
                 <div class="option">
-                    <button class="option-btn">Humidity</button>
-                </div>
-
-                <div class="option">
                     <button class="option-btn">Wind</button>
                 </div>
 
             </div>
-        <!------------------------------->
+            <!------------------------------->
+
+            <div class="location-information">
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="Enter city name">
+                    <button class="search__button">
+                        <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                            <g>
+                                <path
+                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div id="map" style="height: 400px;"></div>
+            </div>
+
+
+            <div class="environmental-stance">
+                <div class="radio-inputs">
+                    <label class="radio">
+                        <input type="radio" name="radio" checked="">
+                        <span class="name">Pro</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio">
+                        <span class="name">Neutral</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio">
+                        <span class="name">Anti</span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="air-quality-index">
+            </div>
+
+
+            <div class="carbon-intensity">
+            </div>
+
+
+            <div class="temperature">
+
+                <div class="radio-input-wrapper">
+                    <label class="temp-label">
+                        <input value="freezing" name="temp-radio" id="temp-freezing" class="temp-radio-input"
+                            type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-freezing">Freezing: Below 32°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="very-cold" name="temp-radio" id="temp-very-cold" class="temp-radio-input"
+                            type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-very-cold">Very Cold: 32-40°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="cold" name="temp-radio" id="temp-cold" class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-cold">Cold: 41-50°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="cool" name="temp-radio" id="temp-cool" class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-cool">Cool: 51-60°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="mild" name="temp-radio" id="temp-mild" class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-mild">Mild: 61-70°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="pleasant" name="temp-radio" id="temp-pleasant" class="temp-radio-input"
+                            type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-pleasant">Pleasant: 71-80°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="warm" name="temp-radio" id="temp-warm" class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-warm">Warm: 81-90°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="hot" name="temp-radio" id="temp-hot" class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-hot">Hot: 91-100°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="very-hot" name="temp-radio" id="temp-very-hot" class="temp-radio-input"
+                            type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-very-hot">Very Hot: 101-110°F</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="extreme-heat" name="temp-radio" id="temp-extreme-heat" class="temp-radio-input"
+                            type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-extreme-heat">Extreme Heat: Above 110°F</div>
+                    </label>
+                </div>
 
 
 
+            </div>
+
+
+            <div class="wind">
+            </div>
+        </div>
     </div>
-
     <!-------------------------------------------->
 
-
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcw6sUMb1jwgOpyQIgCzQ-mGeH8WEgdAk&libraries=places"
+        async defer></script>
     <script src="../static/js/script.js"></script>
 </body>
 

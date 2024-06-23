@@ -80,6 +80,7 @@ img {
 
 
 
+
 /* TITLE TEXT */
 .livability-title {
     text-align: center;
@@ -129,11 +130,13 @@ img {
 }
 
 
+
 /* PERSONALIZATION PAGE */
 .personalization-page {
     transition: opacity 2.5s ease-out, transform 2.5s ease-out;
     opacity: 0;
     flex-wrap: wrap;
+    display: flex;
     height: 100vh;
     position: relative;
     background: linear-gradient(360deg,
@@ -144,4 +147,108 @@ img {
 .personalization-page.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.screen {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/*LOCATION INFORMATION PAGE*/
+.location-information {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#map {
+    height: 477px;
+    width: 477px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+
+/*ENVIRONMETAL STANCE PAGE*/
+
+.environmental-stance{
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+        display: flex;
+        z-index: 3;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+}
+
+/* AIR QUALITY INDEX PAGE*/
+.air-quality-index{
+    height: -webkit-fill-available;
+        width: -webkit-fill-available;
+        display: flex;
+        z-index: 3;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+}
+
+/* CARBON INTENSITY PAGE */
+.carbon-intensity{
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/*TEMPERATURE PAGE*/
+.temperature {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.radio-input-wrapper{
+        background-color: #21283f6b;
+        border-radius: 20px;
+        padding: 15px;
+}
+/* WIND PAGE */
+.wind {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
