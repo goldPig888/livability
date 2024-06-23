@@ -211,6 +211,81 @@
 }
 
 
+/* CARBON INTENSITY */
+
+/* STARS RATING */
+.rating>label {
+    margin-right: 4px;
+}
+
+.rating:not(:checked)>input {
+    display: none;
+}
+
+.rating:not(:checked)>label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.rating:not(:checked)>label>svg {
+    fill: #666;
+    transition: fill 0.3s ease;
+}
+
+.rating>input:checked~label>svg {
+    fill: #ffa723;
+}
+
+.rating:not(:checked)>label:hover~label>svg,
+.rating:not(:checked)>label:hover>svg {
+    fill: #ff9e0b;
+}
+
+#star1:hover~label>svg,
+#star1:hover>svg {
+    fill: #a23c3c !important;
+}
+
+#star2:hover~label>svg,
+#star2:hover>svg {
+    fill: #99542d !important;
+}
+
+#star3:hover~label>svg,
+#star3:hover>svg {
+    fill: #9f7e18 !important;
+}
+
+#star4:hover~label>svg,
+#star4:hover>svg {
+    fill: #22885e !important;
+}
+
+#star5:hover~label>svg,
+#star5:hover>svg {
+    fill: #7951ac !important;
+}
+
+#star1:checked~label>svg {
+    fill: #ef4444;
+}
+
+#star2:checked~label>svg {
+    fill: #e06c2b;
+}
+
+#star3:checked~label>svg {
+    fill: #eab308;
+}
+
+#star4:checked~label>svg {
+    fill: #19c37d;
+}
+
+#star5:checked~label>svg {
+    fill: #ab68ff;
+}
 
 /* TEMPERATURE SELECTOR */
 .temp-label {
@@ -245,6 +320,7 @@
     border-radius: 100px;
     background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
     position: relative;
+    font-family: 'Bai Jamjuree', sans-serif;
 }
 
 .temp-radio-design::before {
@@ -279,4 +355,57 @@
 
 .temp-radio-input:checked+.temp-radio-design+.temp-label-text {
     text-shadow: 0 0 8px currentColor;
+}
+
+/* SLIDER */
+.range-slider {
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #D5DBE1;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000000;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.16);
+    transition: 0.3s ease-in-out;
+}
+
+.range-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.range-slider-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #00000038;
+    border-radius: 32px;
+    width: 70%;
+    border: 1px solid #C6CACE;
+    box-shadow: 0px 1px 2px 0px #1F1E241F;
+}
+
+.range-slidervalue {
+    font-weight: 600;
 }

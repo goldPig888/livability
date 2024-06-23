@@ -184,33 +184,38 @@ img {
 
 /*ENVIRONMETAL STANCE PAGE*/
 
-.environmental-stance{
-        height: -webkit-fill-available;
-        width: -webkit-fill-available;
-        display: flex;
-        z-index: 3;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+.environmental-stance {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 /* AIR QUALITY INDEX PAGE*/
-.air-quality-index{
+.air-quality-index {
     height: -webkit-fill-available;
-        width: -webkit-fill-available;
-        display: flex;
-        z-index: 3;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+    width: -webkit-fill-available;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.rating {
+    background-color: #21283f9e;
+    border-radius: 44px;
+    padding: 22px;
 }
 
 /* CARBON INTENSITY PAGE */
-.carbon-intensity{
+.carbon-intensity {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     display: flex;
@@ -235,11 +240,12 @@ img {
     gap: 20px;
 }
 
-.radio-input-wrapper{
-        background-color: #21283f6b;
-        border-radius: 20px;
-        padding: 15px;
+.radio-input-wrapper {
+    background-color: #21283f6b;
+    border-radius: 20px;
+    padding: 15px;
 }
+
 /* WIND PAGE */
 .wind {
     height: -webkit-fill-available;
