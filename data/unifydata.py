@@ -2,8 +2,31 @@ import json as js
 import csv
 from math import radians, sin, cos, sqrt, atan2
 import pprint as urcute
+pfs = {'Environmental Stance': 0,
+ 'pref_Latitude': 42.642253,
+ 'pref_Longitude': -73.754576,
+ 'pref_aqi': 33,
+ 'pref_carbon_intensity': 451,
+ 'pref_city': 'Preference',
+ 'pref_cloud': 75,
+ 'pref_dewpoint_f': 54.6,
+ 'pref_districts': ['GA-2'],
+ 'pref_feelslike_f': 71.1,
+ 'pref_gust_mph': 14.7,
+ 'pref_heatindex_f': 67.6,
+ 'pref_humidity': 53,
+ 'pref_idx': 5100,
+ 'pref_is_day': 1,
+ 'pref_precip_in': 0.01,
+ 'pref_pressure_in': 29.75,
+ 'pref_state': 'Georgia',
+ 'pref_temp_f': 71.1,
+ 'pref_uv': 4.0,
+ 'pref_vis_miles': 9.0,
+ 'pref_wind_degree': 260,
+ 'pref_wind_mph': 10.5,
+ 'pref_windchill_f': 67.6}
 
-# !! TODO: city -> county mapping and deciphering codes in carbon intensity
 abrvs = {
     "Alabama": "AL",
     "Alaska": "AK",
@@ -75,20 +98,15 @@ fstance = open('data/environmentalStance.json') # Done
 stances = js.load(fstance) # Done
 fweather = open('data/weather.json')
 weather = js.load(fweather)
-
 fcoords = open('data/cityCoords.json') # coordinates data
 coords = js.load(fcoords) # coordinates data
 
-
 def main():
     cities = extractNamesAndStances(names)
-    #print(cities['New York'])
     extractAirQuality(cities)
     extractCarbonIntensity(cities)
     extractWeather(cities)
     write(cities)
-    urcute.pprint(cities['Albany'])
-
 
 def extractNamesAndStances(n: dict):
     cities = {}
@@ -107,9 +125,7 @@ def extractNamesAndStances(n: dict):
             
             cities[city['city']] = temp
     return cities
-    # should return dict w keys of city names of dictionaries with key names: stance, state, districts
 
-# if the name of the location has the name of an existing location in the dict in it, set aqi in the dict
             
             
 def haversine(lat1, lon1, lat2, lon2):

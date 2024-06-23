@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, session, redirect
 import pandas as pd
 import numpy as np
 from model import Model
+import psycopg2 as pg
 
 df = pd.DataFrame('livability/data/unified.csv')
 model = Model(df, 'livability')
@@ -52,5 +53,15 @@ def getScore():
     
 @app.route('/login', methods=['POST', 'GET'])
 def login():
-    if request.method == 'POST':
-        pass
+    if request.method == 'POST': 
+        server = pg.connect()
+        cursor = server.cursor()
+        email = request.form.get('email')
+        pw = request.form.get('password')
+        cursor.execute('SELECT * FROM accounts WHERE email = %s', email)
+        account = cursor.fetchone()
+        if not account:
+            return redirect('/signup')
+        if not account[2]:
+            return render_template('login.html', msg = 'You have not verified this email yet. Please sign on to your email and follow the instructions provided in the email that we sent to you. If you continue to have issues, please email us using this email at envindex@gmail.com')
+      q      
