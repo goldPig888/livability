@@ -4,7 +4,7 @@ import numpy as np
 from model import Model
 import psycopg2 as pg
 
-df = pd.DataFrame('livability/data/unified.csv')
+df = pd.read_csv('data/unified.csv')
 model = Model(df, 'livability')
 def predict(data):
     return Model.predict(data)
@@ -64,4 +64,3 @@ def login():
             return redirect('/signup')
         if not account[2]:
             return render_template('login.html', msg = 'You have not verified this email yet. Please sign on to your email and follow the instructions provided in the email that we sent to you. If you continue to have issues, please email us using this email at envindex@gmail.com')
-      q      

@@ -15,7 +15,7 @@ class Model:
     def fit(self) -> None:
         self.model.fit(self.x_train, self.y_train)
 
-    def predict(self,test: iter) -> pd.ndarray:
+    def predict(self,test: iter) -> pd.array:
         return self.model.predict(test)
     
     def score(self, observed, preferred):
