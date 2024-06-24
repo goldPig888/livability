@@ -31,7 +31,8 @@ ranges = {
 
 # normalize differences
 def normalize_difference(user_value, city_value, range_value):
-    return abs(city_value - user_value) / range_value
+    city_value = 0 if city_value == "-" else city_value
+    return abs(float(city_value) - float(user_value)) / range_value
 
 
 def calculate_livability(df, user_prefs, ranges):
@@ -49,8 +50,3 @@ def calculate_livability(df, user_prefs, ranges):
         livability_score = (1 - total_diff / total_weight) * 100
         scores[r['city']] = livability_score
     return scores
-
-
-
-livability_scores = calculate_livability(df, user_prefs, ranges)
-print(livability_scores)

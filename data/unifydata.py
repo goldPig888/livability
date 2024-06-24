@@ -220,6 +220,7 @@ def outputModeling(cities, prefs):
 
 def write(cities):
     name = "data/unified.csv"
+    print(cities['Houston'])
     with open(name, 'w', newline='') as file:
         keys = [] + list(cities['Houston'].keys())
         writer = csv.DictWriter(file, fieldnames=keys)

@@ -1,18 +1,49 @@
 from flask import Flask, render_template, request, session, redirect
 import pandas as pd
 import numpy as np
+import score
 from model import Model
 import psycopg2 as pg
 
 df = pd.read_csv('data/unified.csv')
+
+user_prefs = {
+    'Environmental Stance': (90, 5),
+    'aqi': (50, 4),
+    'temp_f': (70, 5),
+    'humidity': (50, 3),
+    "carbon_intensity": (60, 2),
+    "wind_mph": (9, 4),
+    "pressure_in": (10.8, 1.4),
+    "precip_in": (1.2, 5),
+    'uv': (8, 6),
+    'vis_miles': (6.5, 3)
+}
+
+
+# rng for normalize
+ranges = {
+    'Environmental Stance': 100, 
+    'aqi': 100,                  
+    'temp_f': 100,               
+    'humidity': 100,
+    "carbon_intensity": 100,
+    "wind_mph": 100,
+    "pressure_in": 100,
+    "precip_in": 100,
+    'uv': 100,
+    'vis_miles': 100              
+}
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = "may is a pretty princess <3"
+t = score.calculate_livability(df, user_prefs, ranges)
+scores = list(t.values())
+df['livability'] = scores
+df.to_csv('data/unified.csv', index=False)
 model = Model(df, 'livability')
 def predict(data):
     return Model.predict(data)
-
-app = Flask(__name__)
-
-app.config["SECRET_KEY"] = "may is a pretty princess <3"
-
 @app.route('/', methods=["POST", "GET"])
 def index():
     return render_template('index.html')
