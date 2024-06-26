@@ -74,8 +74,7 @@
 
 .sidebar {
     position: relative;
-    /* Establishes positioning context */
-    background: linear-gradient(90deg, rgba(20, 32, 10, 0.62) 0%, rgba(37, 115, 39, 0.62) 82.5%);
+    background: linear-gradient(90deg, rgb(12 10 99 / 62%) 0%, rgb(37 103 115 / 62%) 82.5%);
     opacity: 0.70;
     width: 25%;
     height: 100vh;
@@ -89,6 +88,7 @@
     color: #fff;
     box-shadow: 0 0 25px rgba(38, 112, 233, 0.85), 0 0 50px rgba(38, 112, 233, 0.6);
     transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
 }
 
 .option-btn.active {
@@ -97,6 +97,7 @@
     color: #fff;
     box-shadow: 0 0 25px rgba(38, 112, 233, 0.85), 0 0 50px rgba(38, 112, 233, 0.6);
     transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
 }
 
 
@@ -341,8 +342,7 @@
 .temp-label-text {
     color: hsl(0, 0%, 60%);
     margin-left: 14px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    letter-spacing: 1px;
     font-size: 18px;
     font-weight: 900;
     transition: color .3s, text-shadow .3s;
@@ -408,4 +408,86 @@
 
 .range-slidervalue {
     font-weight: 600;
+}
+
+.current-value-box {
+    font-weight: 600;
+    color: cornsilk;
+}
+
+.current-value-box, .category-description-box {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 570;
+    color: #b8f6f2;
+}
+
+
+
+/* INFO BOX */
+.info {
+    background-color: #21283f6b;
+    border-radius: 20px;
+    padding: 15px;
+    color: cornsilk;
+    line-height: 28px;
+    font-weight: 465;
+
+}
+
+/* WIND SPEED */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.custom-radio {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.radio-circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffcc00;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.radio-text {
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-radio input[type="radio"]:checked+.radio-label {
+    background-color: #ffcc00;
+}
+
+.custom-radio input[type="radio"]:checked+.radio-label .radio-circle {
+    border-color: #fff;
+    background-color: #ffcc00;
+}
+
+.custom-radio input[type="radio"]:checked+.radio-label .radio-text {
+    color: #64748b;
 }

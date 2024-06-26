@@ -169,6 +169,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 33px;
 }
 
 
@@ -194,6 +195,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 33px;
 }
 
 /* AIR QUALITY INDEX PAGE*/
@@ -207,6 +209,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 33px;
 }
 .rating {
     background-color: #21283f9e;
@@ -225,6 +228,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 33px;
 }
 
 /*TEMPERATURE PAGE*/
@@ -238,6 +242,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 33px;
 }
 
 .radio-input-wrapper {
@@ -257,4 +262,5 @@ img {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 33px;
 }

@@ -20,8 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const temperatureDiv = document.querySelector(".temperature");
     const windDiv = document.querySelector(".wind");
 
+    const slider = document.getElementById("myRange");
+    const currentValue = document.getElementById("currentValue");
+    const categoryDescription = document.getElementById("categoryDescription");
+
+
     let map;
-    let currentActiveScreen = locationInformationDiv; 
+    let currentActiveScreen = locationInformationDiv;
 
     // Initialize page based on stored state
     setupInitialPageState();
@@ -197,35 +202,39 @@ document.addEventListener("DOMContentLoaded", function () {
             const label = document.getElementById('label-' + input.value);
             if (input.checked) {
                 switch (input.value) {
-                    case 'freezing':
-                        label.style.color = 'hsl(217, 71%, 63%)'; // Lighter blue
+                    case 'comfortable':
+                        label.style.color = 'hsl(120, 100%, 40%)'; // Refreshing green
                         break;
-                    case 'very-cold':
-                        label.style.color = 'hsl(203, 89%, 67%)'; // Cyan-blue
+                    case 'caution':
+                        label.style.color = 'hsl(60, 100%, 50%)'; // Yellow warning
                         break;
-                    case 'cold':
-                        label.style.color = 'hsl(197, 71%, 73%)'; // Sky blue
+                    case 'extreme-caution':
+                        label.style.color = 'hsl(30, 100%, 50%)'; // Orange warning
                         break;
-                    case 'cool':
-                        label.style.color = 'hsl(174, 59%, 59%)'; // Soft teal
+                    case 'danger':
+                        label.style.color = 'hsl(0, 100%, 50%)'; // Danger red
                         break;
-                    case 'mild':
-                        label.style.color = 'hsl(54, 100%, 62%)'; // Lemon yellow
+                    case 'extreme-danger':
+                        label.style.color = 'hsl(330, 100%, 40%)'; // Critical purple
                         break;
-                    case 'pleasant':
-                        label.style.color = 'hsl(34, 100%, 57%)'; // Orange
+
+                    case 'calm-light-breeze':
+                        label.style.color = 'hsl(197, 71%, 88%)'; // Very light blue
                         break;
-                    case 'warm':
-                        label.style.color = 'hsl(14, 100%, 67%)'; // Light red
+                    case 'gentle-moderate-breeze':
+                        label.style.color = 'hsl(197, 71%, 78%)'; // Light blue
                         break;
-                    case 'hot':
-                        label.style.color = 'hsl(6, 90%, 57%)'; // Darker orange
+                    case 'fresh-strong-breeze':
+                        label.style.color = 'hsl(197, 71%, 68%)'; // Medium blue
                         break;
-                    case 'very-hot':
-                        label.style.color = 'hsl(348, 83%, 57%)'; // Rich red
+                    case 'near-gale-gale':
+                        label.style.color = 'hsl(207, 90%, 54%)'; // Dark blue
                         break;
-                    case 'extreme-heat':
-                        label.style.color = 'hsl(284, 57%, 80%)'; // Lighter purple
+                    case 'strong-gale-storm':
+                        label.style.color = 'hsl(217, 89%, 33%)'; // Stormy blue
+                        break;
+                    case 'hurricane':
+                        label.style.color = 'hsl(240, 100%, 27%)'; // Deep navy
                         break;
                 }
             } else {
@@ -233,5 +242,24 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+    slider.oninput = function() {
+        currentValue.textContent = `Current Value: ${this.value}`;
+        updateCategoryDescription(this.value);
+    }
+    function updateCategoryDescription(value) {
+        let description = "";
+        const numValue = parseInt(value);
+        if (numValue <= 100) {
+            description = "Low - Ideal for renewables like wind and solar";
+        } else if (numValue <= 300) {
+            description = "Moderate - Common for efficient natural gas";
+        } else if (numValue <= 500) {
+            description = "High - Typical for older fossil fuel plants";
+        } else {
+            description = "Very High - Associated with coal power plants";
+        }
+        categoryDescription.textContent = `Category: ${description}`;
+    }
 
+    updateCategoryDescription(slider.value);
 });

@@ -97,7 +97,8 @@
 
 
             <div class="environmental-stance">
-                How your ideal city would lean in terms of instituting policies that improve environmental issues such as pollution and reducing carbon footprint.
+                <div class="info">How your ideal city would lean in terms of instituting policies that improve
+                    environmental issues such as pollution and reducing carbon footprint.</div>
                 <div class="radio-inputs">
                     <label class="radio">
                         <input type="radio" name="radio" checked="">
@@ -116,7 +117,8 @@
 
 
             <div class="air-quality-index">
-                How clean the air in your ideal city would be based on the amount of pollutants in the air.
+                <div class="info">How clean the air in your ideal city would be based on the amount of pollutants in the
+                    air.</div>
                 <div class="rating">
                     <input type="radio" id="star5" name="rate" value="5" />
                     <label title="Excellent!" for="star5">
@@ -164,74 +166,59 @@
 
 
             <div class="carbon-intensity">
-                The maximum amount of carbon in the atomsphere that you are willing to tolerate.
+                <div class="info">The maximum amount of carbon in the atmosphere that you are willing to tolerate.</div>
                 <div class="range-slider-div">
-                    <p class="range-slidervalue">smth</p>
-                    <input type="range" min="0" max="100" value="50" class="range-slider" id="myRange">
-                    <p class="range-slidervalue">smth</p>
+                    <p class="range-slidervalue">0</p>
+                    <input type="range" min="0" max="500" value="50" class="range-slider" id="myRange">
+                    <p class="range-slidervalue">500</p>
+                </div>
+                <div class="info">
+                    <div class="current-value-box">
+                        <p id="currentValue">Current Value: 50</p> <!-- Display current numerical value -->
                     </div>
+                    <div class="category-description-box">
+                        <p id="categoryDescription">Category: Moderate</p> <!-- Explain the category -->
+                    </div>
+                </div>
             </div>
 
 
+
             <div class="temperature">
-                Heat index refers to the relationship between temperature and humidity, giving you a better idea of what the city would actually feel like.
+                <div class="info">Heat index refers to the relationship between temperature and humidity, giving you a
+                    better idea of what the city would actually feel like.</div>
                 <div class="radio-input-wrapper">
                     <label class="temp-label">
-                        <input value="freezing" name="temp-radio" id="temp-freezing" class="temp-radio-input"
+                        <input value="comfortable" name="temp-radio" id="temp-comfortable" class="temp-radio-input"
                             type="radio">
                         <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-freezing">Freezing: Below 32°F</div>
+                        <div class="temp-label-text" id="label-comfortable">Comfortable: Below 80°F</div>
                     </label>
                     <label class="temp-label">
-                        <input value="very-cold" name="temp-radio" id="temp-very-cold" class="temp-radio-input"
+                        <input value="caution" name="temp-radio" id="temp-caution" class="temp-radio-input"
                             type="radio">
                         <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-very-cold">Very Cold: 32-40°F</div>
+                        <div class="temp-label-text" id="label-caution">Caution: 80-90°F</div>
                     </label>
                     <label class="temp-label">
-                        <input value="cold" name="temp-radio" id="temp-cold" class="temp-radio-input" type="radio">
+                        <input value="extreme-caution" name="temp-radio" id="temp-extreme-caution"
+                            class="temp-radio-input" type="radio">
                         <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-cold">Cold: 41-50°F</div>
+                        <div class="temp-label-text" id="label-extreme-caution">Extreme Caution: 90-103°F</div>
                     </label>
                     <label class="temp-label">
-                        <input value="cool" name="temp-radio" id="temp-cool" class="temp-radio-input" type="radio">
+                        <input value="danger" name="temp-radio" id="temp-danger" class="temp-radio-input" type="radio">
                         <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-cool">Cool: 51-60°F</div>
+                        <div class="temp-label-text" id="label-danger">Danger: 103-124°F</div>
                     </label>
                     <label class="temp-label">
-                        <input value="mild" name="temp-radio" id="temp-mild" class="temp-radio-input" type="radio">
+                        <input value="extreme-danger" name="temp-radio" id="temp-extreme-danger"
+                            class="temp-radio-input" type="radio">
                         <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-mild">Mild: 61-70°F</div>
-                    </label>
-                    <label class="temp-label">
-                        <input value="pleasant" name="temp-radio" id="temp-pleasant" class="temp-radio-input"
-                            type="radio">
-                        <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-pleasant">Pleasant: 71-80°F</div>
-                    </label>
-                    <label class="temp-label">
-                        <input value="warm" name="temp-radio" id="temp-warm" class="temp-radio-input" type="radio">
-                        <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-warm">Warm: 81-90°F</div>
-                    </label>
-                    <label class="temp-label">
-                        <input value="hot" name="temp-radio" id="temp-hot" class="temp-radio-input" type="radio">
-                        <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-hot">Hot: 91-100°F</div>
-                    </label>
-                    <label class="temp-label">
-                        <input value="very-hot" name="temp-radio" id="temp-very-hot" class="temp-radio-input"
-                            type="radio">
-                        <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-very-hot">Very Hot: 101-110°F</div>
-                    </label>
-                    <label class="temp-label">
-                        <input value="extreme-heat" name="temp-radio" id="temp-extreme-heat" class="temp-radio-input"
-                            type="radio">
-                        <div class="temp-radio-design"></div>
-                        <div class="temp-label-text" id="label-extreme-heat">Extreme Heat: Above 110°F</div>
+                        <div class="temp-label-text" id="label-extreme-danger">Extreme Danger: Above 124°F</div>
                     </label>
                 </div>
+
 
 
 
@@ -239,7 +226,49 @@
 
 
             <div class="wind">
-                The maximum wind speed that you are willing to tolerate.
+                <div class="info">The maximum wind speed that you are willing to tolerate.</div>
+                <div class="radio-input-wrapper">
+                    <label class="temp-label">
+                        <input value="calm-light-breeze" name="temp-radio" id="temp-calm-light-breeze"
+                            class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-calm-light-breeze">Calm to Light Breeze (0-7 mph)</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="gentle-moderate-breeze" name="temp-radio" id="temp-gentle-moderate-breeze"
+                            class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-gentle-moderate-breeze">Gentle to Moderate Breeze (8-18
+                            mph)</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="fresh-strong-breeze" name="temp-radio" id="temp-fresh-strong-breeze"
+                            class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-fresh-strong-breeze">Fresh to Strong Breeze (19-31 mph)
+                        </div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="near-gale-gale" name="temp-radio" id="temp-near-gale-gale"
+                            class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-near-gale-gale">Near Gale to Gale (32-46 mph)</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="strong-gale-storm" name="temp-radio" id="temp-strong-gale-storm"
+                            class="temp-radio-input" type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-strong-gale-storm">Strong Gale to Storm (47-63 mph)</div>
+                    </label>
+                    <label class="temp-label">
+                        <input value="hurricane" name="temp-radio" id="temp-hurricane" class="temp-radio-input"
+                            type="radio">
+                        <div class="temp-radio-design"></div>
+                        <div class="temp-label-text" id="label-hurricane">Hurricane (64+ mph)</div>
+                    </label>
+                </div>
+
+
             </div>
         </div>
     </div>
