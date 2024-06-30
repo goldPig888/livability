@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+    clearCookies();
+
+    let formData = {};
+
     const subheading = document.querySelector(".livability-subheading");
     const button = document.querySelector(".shadow-btn");
     const startPage = document.querySelector(".start-page");
@@ -24,14 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentValue = document.getElementById("currentValue");
     const categoryDescription = document.getElementById("categoryDescription");
 
+    const stars = document.querySelectorAll('input[name="rate"]');
+    const infoBox = document.getElementById('aqiInfo');
+    infoBox.style.display = 'none';
+    const submitButton = document.querySelector(".submit-btn");
 
     let map;
-    let currentActiveScreen = locationInformationDiv;
+    let currentActiveScreen = null;
 
-    // Initialize page based on stored state
+    hideAllContentDivs();
     setupInitialPageState();
-
-    // Set up interactions
     setupButtonInteractions();
     setupLogoInteraction();
     setupOptionInteractions();
@@ -43,25 +49,33 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         const searchBox = new google.maps.places.SearchBox(searchInput);
-
+        searchBox.addListener("places_changed", () => handlePlacesChanged(searchBox));
         map.addListener("bounds_changed", () => {
             searchBox.setBounds(map.getBounds());
         });
+    }
 
-        searchBox.addListener("places_changed", () => {
-            const places = searchBox.getPlaces();
-            if (places.length == 0) return;
+    function handlePlacesChanged(searchBox) {
+        const places = searchBox.getPlaces();
+        if (places.length === 0) return;
+        const bounds = new google.maps.LatLngBounds();
+        places.forEach(place => {
+            if (!place.geometry) return;
+            if (place.geometry.viewport) {
+                bounds.union(place.geometry.viewport);
+            } else {
+                bounds.extend(place.geometry.location);
+            }
+        });
+        map.fitBounds(bounds);
+        formData['Location'] = places.map(place => place.name).join(', ');
+    }
 
-            const bounds = new google.maps.LatLngBounds();
-            places.forEach((place) => {
-                if (!place.geometry) return;
-                if (place.geometry.viewport) {
-                    bounds.union(place.geometry.viewport);
-                } else {
-                    bounds.extend(place.geometry.location);
-                }
-            });
-            map.fitBounds(bounds);
+    function clearCookies() {
+        document.cookie.split(";").forEach(cookie => {
+            const eqPos = cookie.indexOf("=");
+            const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         });
     }
 
@@ -70,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentPage === 'personalizationPage') {
             showPersonalizationPage(false);
             hideAllContentDivs();
+            currentActiveScreen = locationInformationDiv;
             currentActiveScreen.style.display = 'flex';
         } else {
             displayStartPage();
@@ -77,6 +92,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function setupButtonInteractions() {
+
+        submitButton.addEventListener("click", function () {
+            const missingFields = validateInputs();
+            if (missingFields.length > 0) {
+                Toastify({
+                    text: "Please fill in the following fields before submitting:\n " + missingFields.join(", "),
+                    duration: 3000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    style: {
+                        background: "linear-gradient(to right, #472be7, #288128)",
+                    }
+                }).showToast();
+            }
+        });
+
         button.addEventListener("click", function () {
             fadeOutStartPage();
         });
@@ -103,21 +135,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function setupOptionInteractions() {
         const optionButtons = document.querySelectorAll('.option-btn');
-
         optionButtons.forEach(button => {
             button.addEventListener('click', function () {
                 optionButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
-
                 const contentId = this.textContent.toLowerCase().replace(/\s+/g, '-');
                 const newActiveScreen = document.querySelector(`.${contentId}`);
-
                 if (newActiveScreen && currentActiveScreen !== newActiveScreen) {
-                    currentActiveScreen.style.display = 'none';
+                    if (currentActiveScreen) {
+                        currentActiveScreen.style.display = 'none';
+                    }
                     newActiveScreen.style.display = 'flex';
                     currentActiveScreen = newActiveScreen;
                 }
-
                 if (this === locationInfoButton) {
                     if (!map) {
                         initMap();
@@ -125,11 +155,57 @@ document.addEventListener("DOMContentLoaded", function () {
                         google.maps.event.trigger(map, 'resize');
                     }
                 }
+                updateFormData();
             });
         });
-
-        // Select location info by default
         locationInfoButton.click();
+    }
+
+    function updateFormData() {
+        formData['Search Input'] = searchInput.value.trim();
+        document.querySelectorAll('.environmental-stance input[type="radio"]').forEach(radio => {
+            if (radio.checked) {
+                formData['Environmental Stance'] = radio.nextElementSibling.textContent.trim();
+            }
+        });
+    
+        document.querySelectorAll('.temperature .temp-radio-input').forEach(radio => {
+            if (radio.checked) {
+                let label = document.querySelector(`#label-${radio.value}`);
+                formData['Heat Index Temperature'] = extractMedianTemperature(label.textContent);
+            }
+        });
+    
+        document.querySelectorAll('.wind .wind-radio-input').forEach(radio => {
+            if (radio.checked) {
+                let label = document.querySelector(`#label-${radio.value}`);
+                formData['Wind Speed Tolerance'] = extractMedian(label.textContent);
+            }
+        });
+    
+        formData['Carbon Intensity'] = slider.value;
+        stars.forEach(star => {
+            if (star.checked) {
+                formData['Air Quality'] = star.value;
+                updateAqiInfo(star.value);
+            }
+        });
+        console.log('Form Data:', formData);
+    }
+    
+    function extractMedianTemperature(text) {
+        let numbers = text.match(/\d+/g).map(Number);
+        let medianIndex = Math.floor(numbers.length / 2);
+        return numbers[medianIndex - 1];
+    }
+    
+    function extractMedian(text) {
+        let numbers = text.match(/\d+/g).map(Number);
+        if (numbers.length === 1) {
+            return numbers[0];
+        }
+        let medianIndex = Math.floor(numbers.length / 2);
+        return numbers[medianIndex];
     }
 
     function hideAllContentDivs() {
@@ -146,9 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
         personalizationPage.classList.remove("visible");
         startPage.style.display = 'flex';
         startPage.style.opacity = '0';
-
         resetAnimations();
-
         setTimeout(() => {
             startPage.style.opacity = '1';
         }, 10);
@@ -189,63 +263,13 @@ document.addEventListener("DOMContentLoaded", function () {
             button.style.transform = 'translateY(0)';
         }, 1000);
     }
-    document.querySelectorAll('.temp-radio-input').forEach(input => {
-        input.addEventListener('change', function () {
-            if (this.checked) {
-                updateLabelColors();
-            }
-        });
-    });
 
-    function updateLabelColors() {
-        document.querySelectorAll('.temp-radio-input').forEach(input => {
-            const label = document.getElementById('label-' + input.value);
-            if (input.checked) {
-                switch (input.value) {
-                    case 'comfortable':
-                        label.style.color = 'hsl(120, 100%, 40%)'; // Refreshing green
-                        break;
-                    case 'caution':
-                        label.style.color = 'hsl(60, 100%, 50%)'; // Yellow warning
-                        break;
-                    case 'extreme-caution':
-                        label.style.color = 'hsl(30, 100%, 50%)'; // Orange warning
-                        break;
-                    case 'danger':
-                        label.style.color = 'hsl(0, 100%, 50%)'; // Danger red
-                        break;
-                    case 'extreme-danger':
-                        label.style.color = 'hsl(330, 100%, 40%)'; // Critical purple
-                        break;
-
-                    case 'calm-light-breeze':
-                        label.style.color = 'hsl(197, 71%, 88%)'; // Very light blue
-                        break;
-                    case 'gentle-moderate-breeze':
-                        label.style.color = 'hsl(197, 71%, 78%)'; // Light blue
-                        break;
-                    case 'fresh-strong-breeze':
-                        label.style.color = 'hsl(197, 71%, 68%)'; // Medium blue
-                        break;
-                    case 'near-gale-gale':
-                        label.style.color = 'hsl(207, 90%, 54%)'; // Dark blue
-                        break;
-                    case 'strong-gale-storm':
-                        label.style.color = 'hsl(217, 89%, 33%)'; // Stormy blue
-                        break;
-                    case 'hurricane':
-                        label.style.color = 'hsl(240, 100%, 27%)'; // Deep navy
-                        break;
-                }
-            } else {
-                label.style.color = 'hsl(0, 0%, 60%)'; // Default grey
-            }
-        });
-    }
-    slider.oninput = function() {
+    slider.oninput = function () {
         currentValue.textContent = `Current Value: ${this.value}`;
         updateCategoryDescription(this.value);
+        updateFormData();
     }
+
     function updateCategoryDescription(value) {
         let description = "";
         const numValue = parseInt(value);
@@ -258,8 +282,150 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             description = "Very High - Associated with coal power plants";
         }
-        categoryDescription.textContent = `Category: ${description}`;
+        categoryDescription.textContent = description;
     }
 
-    updateCategoryDescription(slider.value);
+    stars.forEach(star => {
+        star.addEventListener('change', function () {
+            updateAqiInfo(this.value);
+            updateFormData();
+            infoBox.style.display = 'block';
+        });
+    });
+
+    function updateAqiInfo(value) {
+        let aqiInfo = "";
+        let aqiUpperBound = 0;
+        switch (value) {
+            case '1':
+                aqiInfo = "Hazardous (301-500)";
+                aqiUpperBound = 500;
+                break;
+            case '2':
+                aqiInfo = "Very Unhealthy (201-300)";
+                aqiUpperBound = 300;
+                break;
+            case '3':
+                aqiInfo = "Unhealthy (151-200)";
+                aqiUpperBound = 200;
+                break;
+            case '4':
+                aqiInfo = "Unhealthy for Sensitive Groups (101-150)";
+                aqiUpperBound = 150;
+                break;
+            case '5':
+                aqiInfo = "Moderate (51-100)";
+                aqiUpperBound = 100;
+                break;
+        }
+        formData['AQI'] = aqiUpperBound;
+        infoBox.textContent = aqiInfo;
+    }
+
+    function updateLabelColorsTemp() {
+        document.querySelectorAll('.temp-radio-input').forEach(input => {
+            const label = document.getElementById('label-' + input.value);
+            if (input.checked) {
+                switch (input.value) {
+                    case 'comfortable':
+                        label.style.color = 'hsl(120, 100%, 40%)';
+                        break;
+                    case 'caution':
+                        label.style.color = 'hsl(60, 100%, 50%)';
+                        break;
+                    case 'extreme-caution':
+                        label.style.color = 'hsl(30, 100%, 50%)';
+                        break;
+                    case 'danger':
+                        label.style.color = 'hsl(0, 100%, 50%)';
+                        break;
+                    case 'extreme-danger':
+                        label.style.color = 'hsl(330, 100%, 40%)';
+                        break;
+                }
+            } else {
+                label.style.color = 'hsl(0, 0%, 60%)';
+            }
+        });
+    }
+
+    function updateLabelColorsWind() {
+        document.querySelectorAll('.wind-radio-input').forEach(input => {
+            const label = document.getElementById('label-' + input.value);
+            if (input.checked) {
+                switch (input.value) {
+                    case 'calm-light-breeze':
+                        label.style.color = 'hsl(197, 71%, 88%)';
+                        break;
+                    case 'gentle-moderate-breeze':
+                        label.style.color = 'hsl(197, 71%, 78%)';
+                        break;
+                    case 'fresh-strong-breeze':
+                        label.style.color = 'hsl(197, 71%, 68%)';
+                        break;
+                    case 'near-gale-gale':
+                        label.style.color = 'hsl(207, 90%, 54%)';
+                        break;
+                    case 'strong-gale-storm':
+                        label.style.color = 'hsl(217, 89%, 33%)';
+                        break;
+                    case 'hurricane':
+                        label.style.color = 'hsl(240, 100%, 27%)';
+                        break;
+                }
+            } else {
+                label.style.color = 'hsl(0, 0%, 60%)';
+            }
+        });
+    }
+
+    document.querySelectorAll('.temp-radio-input').forEach(input => {
+        input.addEventListener('change', function () {
+            if (this.checked) {
+                updateLabelColorsTemp();
+            }
+        });
+    });
+
+    document.querySelectorAll('.wind-radio-input').forEach(input => {
+        input.addEventListener('change', function () {
+            if (this.checked) {
+                updateLabelColorsWind();
+            }
+        });
+    });
+    document.querySelectorAll('.temperature .temp-radio-input').forEach(input => {
+        input.addEventListener('change', function () {
+            updateFormData();
+        });
+    });
+
+    document.querySelectorAll('.wind .wind-radio-input').forEach(input => {
+        input.addEventListener('change', function () {
+            updateFormData();
+        });
+    });
+
+    function validateInputs() {
+        let missingFields = [];
+        if (!searchInput.value.trim()) {
+            missingFields.push("Search Input");
+        }
+        if (!document.querySelector('.environmental-stance input[type="radio"]:checked')) {
+            missingFields.push("Environmental Stance");
+        }
+        if (!document.querySelector('input[name="temp-radio"]:checked')) {
+            missingFields.push("Temperature Preferences");
+        }
+        if (!document.querySelector('input[name="wind-radio"]:checked')) {
+            missingFields.push("Wind Speed Preferences");
+        }
+        if (!document.querySelector('input[name="rate"]:checked')) {
+            missingFields.push("Air Quality Rating");
+        }
+        if (!slider.value.trim()) {
+            missingFields.push("Carbon Intensity");
+        }
+        return missingFields;
+    }
 });

@@ -77,6 +77,7 @@
     background: linear-gradient(90deg, rgb(12 10 99 / 62%) 0%, rgb(37 103 115 / 62%) 82.5%);
     opacity: 0.70;
     width: 25%;
+    display: flex;
     height: 100vh;
     flex-direction: column;
     padding: 20px;
@@ -177,7 +178,7 @@
     display: flex;
     flex-wrap: wrap;
     border-radius: 0.5rem;
-    background-color: #eeeeee75;
+    background-color: #22496675;
     box-sizing: border-box;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
     padding: 0.25rem;
@@ -202,19 +203,27 @@
     border-radius: 0.5rem;
     border: none;
     padding: .5rem 0;
-    color: rgba(51, 65, 85, 1);
+    color: rgb(255, 255, 255);
     transition: all .15s ease-in-out;
 }
 
 .radio-inputs .radio input:checked+.name {
-    background-color: #e9feff;
+    background-color: #7ccfb3;
     font-weight: 600;
+    color: #333;
 }
 
 
 /* CARBON INTENSITY */
 
 /* STARS RATING */
+.rating {
+    background-color: #2027509e;
+    border-radius: 44px;
+    padding: 22px;
+    opacity: 70%;
+}
+
 .rating>label {
     margin-right: 4px;
 }
@@ -357,6 +366,76 @@
     text-shadow: 0 0 8px currentColor;
 }
 
+/* WIND SELECTOR */
+.wind-label {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    padding: 14px 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.wind-label:hover,
+.wind-label:focus-within,
+.wind-label:active {
+    background: hsla(0, 0%, 80%, .14);
+}
+
+.wind-radio-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.wind-radio-design {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+    background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+    position: relative;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.wind-radio-design::before {
+    content: '';
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: hsl(0, 0%, 90%);
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.wind-radio-input:checked+.wind-radio-design::before {
+    transform: scale(0);
+}
+
+.wind-label-text {
+    color: hsl(0, 0%, 60%);
+    margin-left: 14px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 900;
+    transition: color .3s, text-shadow .3s;
+}
+
+.wind-radio-input:checked~.wind-label-text {
+    color: hsl(184, 83%, 86%);
+}
+
+.wind-radio-input:checked+.wind-radio-design+.wind-label-text {
+    text-shadow: 0 0 8px currentColor;
+}
+
+
+
 /* SLIDER */
 .range-slider {
     width: 100%;
@@ -415,7 +494,8 @@
     color: cornsilk;
 }
 
-.current-value-box, .category-description-box {
+.current-value-box,
+.category-description-box {
     text-align: center;
     font-size: 16px;
     font-weight: 570;
@@ -490,4 +570,34 @@
 
 .custom-radio input[type="radio"]:checked+.radio-label .radio-text {
     color: #64748b;
+}
+
+/* submit button */
+.submit-btn {
+    font-size: 18px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow, transform;
+    background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 2.6em;
+    z-index: 3;
+    position: relative;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.submit-btn:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+    transform: translateY(-0.1em);
+}
+
+.submit-btn:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
 }

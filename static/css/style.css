@@ -211,12 +211,9 @@ img {
     gap: 20px;
     padding: 33px;
 }
-.rating {
-    background-color: #21283f9e;
-    border-radius: 44px;
-    padding: 22px;
+#aqiInfo{
+    color:#b8f6f2;
 }
-
 /* CARBON INTENSITY PAGE */
 .carbon-intensity {
     height: -webkit-fill-available;
@@ -242,7 +239,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 33px;
+    padding: 90px;
 }
 
 .radio-input-wrapper {
