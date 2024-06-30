@@ -150,12 +150,12 @@ img {
 }
 
 .screen {
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     display: flex;
     flex-direction: row;
 }
-
 
 
 /*LOCATION INFORMATION PAGE*/

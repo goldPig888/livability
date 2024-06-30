@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector(".shadow-btn");
     const startPage = document.querySelector(".start-page");
     const personalizationPage = document.querySelector(".personalization-page");
+    const screen = document.querySelector(".screen");
+    const resultsPage = document.querySelector(".results-page");
     const logoContainer = document.querySelector(".logo-container");
     const searchInput = document.querySelector('.search__input');
 
@@ -92,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function setupButtonInteractions() {
-
         submitButton.addEventListener("click", function () {
             const missingFields = validateInputs();
             if (missingFields.length > 0) {
@@ -106,6 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         background: "linear-gradient(to right, #472be7, #288128)",
                     }
                 }).showToast();
+            } else {
+                sendPreferencesToFlask();
             }
         });
 
@@ -236,6 +239,54 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2500);
     }
 
+    function fadeOutScreen() {
+        screen.style.opacity = '0';
+        setTimeout(() => {
+            screen.style.display = 'none';
+            showResultsPage();
+        }, 2500);
+    }
+
+    function sendPreferencesToFlask() {
+        fetch('/preferences', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                fadeOutScreen();
+            } else {
+                Toastify({
+                    text: "Failed to submit preferences. Please try again.",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    style: {
+                        background: "linear-gradient(to right, #e74c3c, #e74c3c)",
+                    }
+                }).showToast();
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            Toastify({
+                text: "An error occurred. Please try again.",
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                style: {
+                    background: "linear-gradient(to right, #e74c3c, #e74c3c)",
+                }
+            }).showToast();
+        });
+    }
+
     function showPersonalizationPage(saveState) {
         personalizationPage.style.display = 'flex';
         personalizationPage.style.opacity = '0';
@@ -247,6 +298,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }, 10);
         locationInfoButton.click();
+    }
+
+    function showResultsPage() {
+        resultsPage.style.display = 'flex';
+        resultsPage.style.opacity = '0';
+        setTimeout(() => {
+            resultsPage.style.opacity = '1';
+        }, 10);
     }
 
     function resetAnimations() {
