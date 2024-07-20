@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <link rel="stylesheet" type="text/css" href="../static/css/components.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <title>Livability</title>
 </head>
@@ -167,8 +167,8 @@
                     </label>
                 </div>
 
-                <div class="info"id="aqiInfo"></div>
-                
+                <div class="info" id="aqiInfo"></div>
+
 
             </div>
 
@@ -189,7 +189,6 @@
                     </div>
                 </div>
             </div>
-
 
 
             <div class="temperature">
@@ -237,41 +236,56 @@
                 <div class="info">The maximum wind speed that you are willing to tolerate.</div>
                 <div class="radio-input-wrapper">
                     <label class="wind-label">
-                        <input value="calm-light-breeze" name="wind-radio" id="wind-calm-light-breeze" class="wind-radio-input" type="radio">
+                        <input value="calm-light-breeze" name="wind-radio" id="wind-calm-light-breeze"
+                            class="wind-radio-input" type="radio">
                         <div class="wind-radio-design"></div>
                         <div class="wind-label-text" id="label-calm-light-breeze">Calm to Light Breeze (0-7 mph)</div>
                     </label>
                     <label class="wind-label">
-                        <input value="gentle-moderate-breeze" name="wind-radio" id="wind-gentle-moderate-breeze" class="wind-radio-input" type="radio">
+                        <input value="gentle-moderate-breeze" name="wind-radio" id="wind-gentle-moderate-breeze"
+                            class="wind-radio-input" type="radio">
                         <div class="wind-radio-design"></div>
-                        <div class="wind-label-text" id="label-gentle-moderate-breeze">Gentle to Moderate Breeze (8-18 mph)</div>
+                        <div class="wind-label-text" id="label-gentle-moderate-breeze">Gentle to Moderate Breeze (8-18
+                            mph)</div>
                     </label>
                     <label class="wind-label">
-                        <input value="fresh-strong-breeze" name="wind-radio" id="wind-fresh-strong-breeze" class="wind-radio-input" type="radio">
+                        <input value="fresh-strong-breeze" name="wind-radio" id="wind-fresh-strong-breeze"
+                            class="wind-radio-input" type="radio">
                         <div class="wind-radio-design"></div>
-                        <div class="wind-label-text" id="label-fresh-strong-breeze">Fresh to Strong Breeze (19-31 mph)</div>
+                        <div class="wind-label-text" id="label-fresh-strong-breeze">Fresh to Strong Breeze (19-31 mph)
+                        </div>
                     </label>
                     <label class="wind-label">
-                        <input value="near-gale-gale" name="wind-radio" id="wind-near-gale-gale" class="wind-radio-input" type="radio">
+                        <input value="near-gale-gale" name="wind-radio" id="wind-near-gale-gale"
+                            class="wind-radio-input" type="radio">
                         <div class="wind-radio-design"></div>
                         <div class="wind-label-text" id="label-near-gale-gale">Near Gale to Gale (32-46 mph)</div>
                     </label>
                     <label class="wind-label">
-                        <input value="strong-gale-storm" name="wind-radio" id="wind-strong-gale-storm" class="wind-radio-input" type="radio">
+                        <input value="strong-gale-storm" name="wind-radio" id="wind-strong-gale-storm"
+                            class="wind-radio-input" type="radio">
                         <div class="wind-radio-design"></div>
                         <div class="wind-label-text" id="label-strong-gale-storm">Strong Gale to Storm (47-63 mph)</div>
                     </label>
                     <label class="wind-label">
-                        <input value="hurricane" name="wind-radio" id="wind-hurricane" class="wind-radio-input" type="radio">
+                        <input value="hurricane" name="wind-radio" id="wind-hurricane" class="wind-radio-input"
+                            type="radio">
                         <div class="wind-radio-design"></div>
                         <div class="wind-label-text" id="label-hurricane">Hurricane (64+ mph)</div>
                     </label>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="results-page">
+            <div class="loader">
+                <div class="worm"></div>
+                <div class="circleMiddle"></div>
+            </div>
+            <div class="info" id="loadingMessage"></div>
+        </div>
+        
         </div>
     </div>
 

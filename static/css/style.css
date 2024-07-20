@@ -261,3 +261,17 @@ img {
     gap: 20px;
     padding: 33px;
 }
+
+/* RESULTS PAGE*/
+.results-page {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 33px;
+}

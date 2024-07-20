@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    clearCookies();
+    initializeApp();
 
     let formData = {};
 
@@ -73,12 +73,25 @@ document.addEventListener("DOMContentLoaded", function () {
         formData['Location'] = places.map(place => place.name).join(', ');
     }
 
+    function initializeApp() {
+        clearCookies();
+        clearLocalStorageAndSessionStorage(); // Clear all local storage and session storage
+        if (!sessionStorage.getItem('initialized')) {
+            sessionStorage.setItem('initialized', 'true');
+        }
+    }
+
     function clearCookies() {
         document.cookie.split(";").forEach(cookie => {
             const eqPos = cookie.indexOf("=");
             const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+            document.cookie = name + `=;expires=${new Date(0).toUTCString()};path=/`;
         });
+    }
+
+    function clearLocalStorageAndSessionStorage() {
+        localStorage.clear();
+        sessionStorage.clear();
     }
 
     function setupInitialPageState() {
@@ -88,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
             hideAllContentDivs();
             currentActiveScreen = locationInformationDiv;
             currentActiveScreen.style.display = 'flex';
+        } else if (currentPage === 'resultsPage') {
+            showResultsPage(false);
         } else {
             displayStartPage();
         }
@@ -243,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
         screen.style.opacity = '0';
         setTimeout(() => {
             screen.style.display = 'none';
-            showResultsPage();
+            showResultsPage(true);
         }, 2500);
     }
 
@@ -300,12 +315,35 @@ document.addEventListener("DOMContentLoaded", function () {
         locationInfoButton.click();
     }
 
-    function showResultsPage() {
+    function showResultsPage(saveState) {
         resultsPage.style.display = 'flex';
         resultsPage.style.opacity = '0';
         setTimeout(() => {
             resultsPage.style.opacity = '1';
+            if (saveState) {
+                localStorage.setItem('currentPage', 'resultsPage');
+            }
         }, 10);
+
+        const messages = [
+            "Analyzing Environmental Stance...",
+            "Evaluating city's environmental policies...",
+            "Comparing sustainability measures...",
+            "Assessing average temperature...",
+            "Checking climate conditions...",
+            "Matching temperature with your preferences...",
+            "Measuring wind speed...",
+            "Evaluating breeziness...",
+            "Checking wind conditions...",
+            "Calculating air quality index...",
+            "Assessing air purity...",
+            "Evaluating pollution levels...",
+            "Analyzing carbon footprint...",
+            "Evaluating carbon intensity...",
+            "Checking emission levels..."
+        ];
+
+        rotateMessages(messages, "loadingMessage", 2000); // Change message every 2 seconds
     }
 
     function resetAnimations() {
@@ -486,5 +524,15 @@ document.addEventListener("DOMContentLoaded", function () {
             missingFields.push("Carbon Intensity");
         }
         return missingFields;
+    }
+
+    function rotateMessages(messages, elementId, interval) {
+        let index = 0;
+        const element = document.getElementById(elementId);
+    
+        setInterval(() => {
+            element.textContent = messages[index];
+            index = (index + 1) % messages.length;
+        }, interval);
     }
 });
