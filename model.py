@@ -1,4 +1,5 @@
 import joblib
+from scipy.stats import norm
 from sklearn import linear_model as lm
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler

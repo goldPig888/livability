@@ -135,7 +135,8 @@ def getScore():
     preferences_df = preferences_df[model.feature_names]
     
     pred_score = model.predict(preferences_df)[0]
-    
+    # obtain the conditions of the city, put it in a dataframe, then predict the city OR find what our score for the city was and comp w pred_score
+    mod_score = model.score(model.predict())
     if request.method == 'POST':
         return jsonify(success=True, score=pred_score)
     else:
