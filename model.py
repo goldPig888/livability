@@ -6,6 +6,8 @@ from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 import pandas as pd
 
+
+# idea: maybe CNN for this?
 class Model:
     def __init__(self, df, response: str) -> None:
         if df is not None:

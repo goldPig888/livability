@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, session, jsonify
 import pandas as pd
 import numpy as np
 import random
+import math
 import matplotlib
 matplotlib.use('Agg')
 from model import Model
@@ -43,41 +44,47 @@ def generate_mock_data(num_entries):
 
 def calculate_livability(df):
     ideal_values = {
-        "aqi": 25,
-        "air_quality": 1,
+        "aqi": 0,
+        "air_quality": 0,
         "carbon_intensity": 50,
         "environmental_stance": 1,
-        "heat_index_temp": 68,
+        "heat_index_temp": 62.2,
         "wind_speed_tolerance": 10
     }
     weights = {
-        "aqi": 0.2,
-        "air_quality": 0.2,
-        "carbon_intensity": 0.1,
-        "environmental_stance": 0.1,
-        "heat_index_temp": 0.2,
+        "aqi": 0.35,
+        "air_quality": 0.05,
+        "carbon_intensity": 0.05,
+        "environmental_stance": 0.05,
+        "heat_index_temp": 0.3,
         "wind_speed_tolerance": 0.2
     }
     max_deviations = {
-        "aqi": 475,  # 500 - 25
-        "air_quality": 4,  # 5 - 1
+        "aqi": 500,  # 500 - 0
+        "air_quality": 5,  # 5 - 0
         "carbon_intensity": 450,  # 500 - 50
         "environmental_stance": 1,  # Max deviation (0 to 2)
         "heat_index_temp": 98,  # Max deviation (-30 to 68, 120 - 68)
-        "wind_speed_tolerance": 90  # 100 - 10
+        "wind_speed_tolerance": 100  # 100 - 0
     }
     
     scores = []
     for _, row in df.iterrows():
-        normalized_score = 100
+        normalized_score = len(max_deviations)
         for key in ideal_values:
             deviation = abs(row[key] - ideal_values[key])
             normalized_deviation = deviation / max_deviations[key]
-            penalty = weights[key] * normalized_deviation * 100
+            print(weights[key] * normalized_deviation * 100)
+        
+            penalty = sigmoid(weights[key] * normalized_deviation) / 6
             normalized_score -= penalty
-        normalized_score = max(0, min(normalized_score, 100)) 
+        normalized_score = max(0, min(normalized_score * 100 / 6, 100)) 
         scores.append(normalized_score)
     return scores
+
+def sigmoid(x):
+    return (1 / 1 + math.exp(-x))
+
 
 mock_data = generate_mock_data(1000)
 features = mock_data.drop(columns=['livability'])
@@ -136,7 +143,6 @@ def getScore():
     
     pred_score = model.predict(preferences_df)[0]
     # obtain the conditions of the city, put it in a dataframe, then predict the city OR find what our score for the city was and comp w pred_score
-    mod_score = model.score(model.predict())
     if request.method == 'POST':
         return jsonify(success=True, score=pred_score)
     else:
