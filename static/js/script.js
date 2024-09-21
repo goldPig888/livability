@@ -180,36 +180,71 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateFormData() {
-        formData['Search Input'] = searchInput.value.trim();
+        // Get location data (city name from Search Input)
+        formData['city'] = searchInput.value.trim();  // "Search Input" becomes "city"
+        
+        // Environmental Stance
         document.querySelectorAll('.environmental-stance input[type="radio"]').forEach(radio => {
             if (radio.checked) {
-                formData['Environmental Stance'] = radio.nextElementSibling.textContent.trim();
+                formData['environmental_stance'] = radio.nextElementSibling.textContent.trim();
             }
         });
     
+        // Latitude and Longitude from Google Places API (if available)
+        if (google && google.maps && map) {
+            const bounds = map.getBounds();
+            if (bounds) {
+                const center = bounds.getCenter();
+                formData['Latitude'] = center.lat();
+                formData['Longitude'] = center.lng();
+            }
+        }
+    
+        // AQI (Air Quality Index)
+        stars.forEach(star => {
+            if (star.checked) {
+                formData['aqi'] = Number(star.value);  // Convert to number
+                updateAqiInfo(star.value);  // This will set appropriate range info
+            }
+        });
+    
+        // Carbon Intensity (from slider)
+        formData['carbon_intensity'] = Number(slider.value);  // Convert to number
+    
+        // Temperature preferences (Handle the temperature ranges based on selection)
         document.querySelectorAll('.temperature .temp-radio-input').forEach(radio => {
             if (radio.checked) {
                 let label = document.querySelector(`#label-${radio.value}`);
-                formData['Heat Index Temperature'] = extractMedianTemperature(label.textContent);
+                let selectedTemperatureRange = label.textContent;
+                
+                // Check which range was selected and set the appropriate values
+                if (radio.value === 'comfortable') {
+                    formData['heatindex_f'] = 75; // You can set a default like 75 for 'Comfortable: Below 80°F'
+                } else if (radio.value === 'caution') {
+                    formData['heatindex_f'] = extractMedianTemperature(selectedTemperatureRange);  // This will extract median for the 80-90°F range
+                } else if (radio.value === 'extreme-caution') {
+                    formData['heatindex_f'] = extractMedianTemperature(selectedTemperatureRange);  // Median for 90-103°F
+                } else if (radio.value === 'danger') {
+                    formData['heatindex_f'] = extractMedianTemperature(selectedTemperatureRange);  // Median for 103-124°F
+                } else if (radio.value === 'extreme-danger') {
+                    formData['heatindex_f'] = 125;  // For 'Extreme Danger: Above 124°F', you can set a default high value like 125°F
+                }
             }
         });
     
+        // Wind Speed Tolerance
         document.querySelectorAll('.wind .wind-radio-input').forEach(radio => {
             if (radio.checked) {
                 let label = document.querySelector(`#label-${radio.value}`);
-                formData['Wind Speed Tolerance'] = extractMedian(label.textContent);
+                formData['wind_speed_tolerance'] = Number(extractMedian(label.textContent));  // Convert to number
             }
         });
     
-        formData['Carbon Intensity'] = slider.value;
-        stars.forEach(star => {
-            if (star.checked) {
-                formData['Air Quality'] = star.value;
-                updateAqiInfo(star.value);
-            }
-        });
         console.log('Form Data:', formData);
     }
+    
+    
+    
     
     function extractMedianTemperature(text) {
         let numbers = text.match(/\d+/g).map(Number);
